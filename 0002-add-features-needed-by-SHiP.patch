@@ -1,0 +1,180 @@
+From 486fadd166990fa4770f00c9c217d69c6dfd94de Mon Sep 17 00:00:00 2001
+From: Thomas Ruf <Thomas.Ruf@cern.ch>
+Date: Wed, 4 Oct 2017 11:41:51 +0200
+Subject: [PATCH 2/2] add features needed by SHiP
+
+---
+ 0001-Import-patches-from-ShipSoft.patch       | 80 +++++++++++++++++++++++++++
+ source/CMakeLists.txt                         |  2 +
+ source/geant4vmcLinkDef.h                     |  3 +-
+ source/geometry/include/TG4GeometryServices.h |  1 +
+ source/geometry/src/TG4GeometryServices.cxx   | 15 +++++
+ 5 files changed, 100 insertions(+), 1 deletion(-)
+ create mode 100644 0001-Import-patches-from-ShipSoft.patch
+
+diff --git a/0001-Import-patches-from-ShipSoft.patch b/0001-Import-patches-from-ShipSoft.patch
+new file mode 100644
+index 0000000..7907763
+--- /dev/null
++++ b/0001-Import-patches-from-ShipSoft.patch
+@@ -0,0 +1,80 @@
++From d35267de4a9984b55d3689ddc6ed1c28ca950495 Mon Sep 17 00:00:00 2001
++From: Philipp Munkes <p.munkes@cern.ch>
++Date: Tue, 25 Jul 2017 16:14:45 +0200
++Subject: [PATCH] Import patches from ShipSoft
++
++---
++ applied_patches.txt                      | 2 ++
++ source/event/include/TG4SteppingAction.h | 3 ++-
++ source/physics/include/TG4ExtDecayer.h   | 2 ++
++ source/physics/src/TG4ExtDecayer.cxx     | 4 ++--
++ 4 files changed, 8 insertions(+), 3 deletions(-)
++ create mode 100644 applied_patches.txt
++
++diff --git a/applied_patches.txt b/applied_patches.txt
++new file mode 100644
++index 0000000..bfd2041
++--- /dev/null
+++++ b/applied_patches.txt
++@@ -0,0 +1,2 @@
+++geant4vmc_neutrino.patch
+++geant4_vmc_temp.patch
++diff --git a/source/event/include/TG4SteppingAction.h b/source/event/include/TG4SteppingAction.h
++index 55c44b8..95cf64a 100755
++--- a/source/event/include/TG4SteppingAction.h
+++++ b/source/event/include/TG4SteppingAction.h
++@@ -158,7 +158,8 @@ inline void TG4SteppingAction::SetLoopVerboseLevel(G4int level) {
++ 
++ inline void TG4SteppingAction::SetMaxNofSteps(G4int number) { 
++   /// Set maximum number of steps allowed 
++-  fMaxNofSteps = number; 
+++  // fMaxNofSteps = number; 
+++  std::cout<<"bypass setmaxnoofstep "<<number<<std::endl;
++ }
++ 
++ inline void TG4SteppingAction::SetSpecialControls(TG4SpecialControlsV2* specialControls)  { 
++diff --git a/source/physics/include/TG4ExtDecayer.h b/source/physics/include/TG4ExtDecayer.h
++index a67aac4..9752588 100755
++--- a/source/physics/include/TG4ExtDecayer.h
+++++ b/source/physics/include/TG4ExtDecayer.h
++@@ -46,6 +46,7 @@ class TG4ExtDecayer : public G4VExtDecayer,
++     virtual ~TG4ExtDecayer();
++ 
++     virtual G4DecayProducts* ImportDecayProducts(const G4Track& track);
+++    virtual void    withNeutrinos() {fWithNeutrinos = true;}
++     
++   private:
++     /// Not implemented
++@@ -56,6 +57,7 @@ class TG4ExtDecayer : public G4VExtDecayer,
++     TG4ParticlesManager* fParticlesManager;  ///< particles manager 
++     TVirtualMCDecayer*   fExternalDecayer;   ///< the external decayer
++     TClonesArray*        fDecayProductsArray;///< array of decay products
+++    bool    fWithNeutrinos; ///< follow also neutrinos 
++ };
++ 
++ #endif //TG4_EXT_DECAYER_H
++diff --git a/source/physics/src/TG4ExtDecayer.cxx b/source/physics/src/TG4ExtDecayer.cxx
++index 9a01de1..08cebf3 100755
++--- a/source/physics/src/TG4ExtDecayer.cxx
+++++ b/source/physics/src/TG4ExtDecayer.cxx
++@@ -36,7 +36,7 @@ TG4ExtDecayer::TG4ExtDecayer(TVirtualMCDecayer* externalDecayer)
++     TG4Verbose("extDecayer"),
++     fParticlesManager(TG4ParticlesManager::Instance()),
++     fExternalDecayer(externalDecayer),
++-    fDecayProductsArray(0)
+++    fDecayProductsArray(0),fWithNeutrinos(true)
++ {
++ /// Standard constructor
++ 
++@@ -108,7 +108,7 @@ G4DecayProducts* TG4ExtDecayer::ImportDecayProducts(const G4Track& track)
++     G4int status = particle->GetStatusCode();
++     G4int pdg = particle->GetPdgCode();
++     if ( status>0 && status<11 && 
++-         abs(pdg)!=12 && abs(pdg)!=14 && abs(pdg)!=16 ) {
+++        ( (abs(pdg)!=12 && abs(pdg)!=14 && abs(pdg)!=16) || fWithNeutrinos) ) {
++       // pass to tracking final particles only;
++       // skip neutrinos
++ 
++-- 
++2.9.3
++
+diff --git a/source/CMakeLists.txt b/source/CMakeLists.txt
+index 4382423..b1fe2d0 100644
+--- a/source/CMakeLists.txt
++++ b/source/CMakeLists.txt
+@@ -126,6 +126,8 @@ ROOT_GENERATE_DICTIONARY(
+   with_rootmap
+   ${CMAKE_CURRENT_SOURCE_DIR}/run/include/TG4RunConfiguration.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/run/include/TGeant4.h
++  ${CMAKE_CURRENT_SOURCE_DIR}/geometry/include/TG4MagneticField.h
++  ${CMAKE_CURRENT_SOURCE_DIR}/geometry/include/TG4GeometryServices.h
+   LINKDEF ${CMAKE_CURRENT_SOURCE_DIR}/geant4vmcLinkDef.h)
+ 
+ #----------------------------------------------------------------------------
+diff --git a/source/geant4vmcLinkDef.h b/source/geant4vmcLinkDef.h
+index 5de6c6d..fca09be 100644
+--- a/source/geant4vmcLinkDef.h
++++ b/source/geant4vmcLinkDef.h
+@@ -19,5 +19,6 @@
+  
+ #pragma link C++ class  TGeant4+;
+ #pragma link C++ class  TG4RunConfiguration+;
+-
++#pragma link C++ class  TG4MagneticField+;
++#pragma link C++ class  TG4GeometryServices+;
+ #endif
+diff --git a/source/geometry/include/TG4GeometryServices.h b/source/geometry/include/TG4GeometryServices.h
+index 72805c4..bd478ee 100755
+--- a/source/geometry/include/TG4GeometryServices.h
++++ b/source/geometry/include/TG4GeometryServices.h
+@@ -83,6 +83,7 @@ class TG4GeometryServices : public TG4Verbose
+            // printing 
+     void PrintLimits(const G4String& name) const;
+     void PrintVolumeLimits(const G4String& volumeName) const;
++    void GetField(const G4String& volumeName, const G4double*, G4double*) const;
+     void PrintStatistics(G4bool open, G4bool close) const;
+     void PrintLogicalVolumeStore() const;
+     void PrintPhysicalVolumeStore() const;
+diff --git a/source/geometry/src/TG4GeometryServices.cxx b/source/geometry/src/TG4GeometryServices.cxx
+index 704357a..78966ee 100755
+--- a/source/geometry/src/TG4GeometryServices.cxx
++++ b/source/geometry/src/TG4GeometryServices.cxx
+@@ -13,6 +13,7 @@
+ /// \author I. Hrivnacova; IPN, Orsay
+ 
+ #include "TG4GeometryServices.h"
++#include "TG4MagneticField.h"
+ #include "TG4MediumMap.h"
+ #include "TG4Medium.h"
+ #include "TG4Limits.h"
+@@ -24,6 +25,7 @@
+ 
+ #include <G4LogicalVolumeStore.hh>
+ #include <G4LogicalVolume.hh>
++#include <G4FieldManager.hh>
+ #include <G4PhysicalVolumeStore.hh>
+ #include <G4VPhysicalVolume.hh>
+ #include <G4Material.hh>
+@@ -494,6 +496,19 @@ void TG4GeometryServices::PrintVolumeLimits(const G4String& volumeName) const
+ }            
+ 
+ //_____________________________________________________________________________
++void TG4GeometryServices::GetField(const G4String& volumeName, const G4double point[3], G4double bfield[3]) const
++{
++/// Find a logical volume with the specified name and 
++/// prints magnetic field at local point.
++    G4LogicalVolume* lv = FindLogicalVolume(volumeName, false);
++    G4FieldManager* fm = lv->GetFieldManager();
++    if (fm) {  
++       TG4MagneticField* fi = (TG4MagneticField*)fm->GetDetectorField();
++       fi->GetFieldValue(point,bfield);
++    }
++}
++
++//_____________________________________________________________________________
+ void TG4GeometryServices::PrintStatistics(G4bool open, G4bool close) const
+ {
+ /// Print G4 geometry statistics.
+-- 
+2.9.3
+
