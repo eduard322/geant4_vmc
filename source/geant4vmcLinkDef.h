@@ -19,5 +19,6 @@
  
 #pragma link C++ class  TGeant4+;
 #pragma link C++ class  TG4RunConfiguration+;
-
+#pragma link C++ class  TG4MagneticField+;
+#pragma link C++ class  TG4GeometryServices+;
 #endif

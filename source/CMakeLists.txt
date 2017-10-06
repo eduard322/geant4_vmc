@@ -126,6 +126,8 @@ ROOT_GENERATE_DICTIONARY(
   with_rootmap
   ${CMAKE_CURRENT_SOURCE_DIR}/run/include/TG4RunConfiguration.h
   ${CMAKE_CURRENT_SOURCE_DIR}/run/include/TGeant4.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/geometry/include/TG4MagneticField.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/geometry/include/TG4GeometryServices.h
   LINKDEF ${CMAKE_CURRENT_SOURCE_DIR}/geant4vmcLinkDef.h)
 
 #----------------------------------------------------------------------------
