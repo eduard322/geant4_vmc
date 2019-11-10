@@ -22,11 +22,12 @@
 #include "TG4SpecialPhysicsList.h"
 #include "TG4PrimaryGeneratorAction.h"
 #include "TG4RunAction.h"
-#include "TG4EventAction.h"
+#include "myEventAction.h"
 #include "TG4TrackingAction.h"
 #include "TG4SteppingAction.h"
 #include "TG4SpecialStackingAction.h"
 #include "TG4Globals.h"
+#include "mySteppingAction.h"
 
 #include <G4UImessenger.hh>
 //#include <G4PhysListFactory.hh>
@@ -253,7 +254,7 @@ G4UserEventAction*  TG4RunConfiguration::CreateEventAction()
 {
 /// Create and return Geant4 VMC default event action
 
-  return new TG4EventAction();
+  return new myEventAction();
 }  
 
 //_____________________________________________________________________________
@@ -269,7 +270,7 @@ TG4SteppingAction*  TG4RunConfiguration::CreateSteppingAction()
 {
 /// Create and return Geant4 VMC default stepping action
 
-  return new TG4SteppingAction();
+  return new mySteppingAction();
 }  
 
 //_____________________________________________________________________________
