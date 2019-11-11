@@ -305,14 +305,14 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
     if (position.z()> -7000. && position.z() < -3500.){
 
       G4int trID = step->GetTrack()->GetTrackID();
-      if (trID != lastTrackN || lastZPosition > position.z()){
-        lastTrackN = trID;
+      if (trID < lastTrackN || lastZPosition > position.z()){
         eventN+=1;
       }
       G4ThreeVector momentum = step -> GetTrack() -> GetDynamicParticle()->GetMomentum();
         // myfile << "event, track, x, y, z, px, py, pz\n";
       myfile << eventN<<", "<<trID<<", "<<position.x()<<", "<<position.y()<<", "<<position.z()<<", "<<momentum.x()<<", "<<momentum.y()<<", "<<momentum.z()<<std::endl;
       lastZPosition = position.z();
+      lastTrackN = trID;
     }
 
   }
