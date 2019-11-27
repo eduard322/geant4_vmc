@@ -106,6 +106,11 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
     G4cout << ">>> Event " << event->GetEventID() << G4endl;
     fTimer.Start();
   }  
+  long seeds[10];
+  seeds[0] = gRandom->GetSeed();    
+  seeds[1] = gRandom->GetSeed();    
+  seeds[2] = 0;    
+  CLHEP::HepRandom::setTheSeeds(seeds);
 }
 
 //_____________________________________________________________________________
