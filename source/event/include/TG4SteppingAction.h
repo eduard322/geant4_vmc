@@ -22,6 +22,9 @@
 
 #include <globals.hh>
 
+#include <iostream>
+#include <fstream>
+
 class TG4SpecialControlsV2;
 class TG4TrackManager;
 class TG4StepManager;
@@ -76,6 +79,11 @@ class TG4SteppingAction : public G4UserSteppingAction
     G4int GetMaxNofSteps() const;
     G4bool GetIsPairCut() const;
     G4bool GetCollectTracks() const;
+
+    std::ofstream myfile;
+    G4int eventN;
+    G4int lastTrackN;
+    G4double lastZPosition;
 
   protected:
     // methods

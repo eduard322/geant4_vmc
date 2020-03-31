@@ -59,13 +59,19 @@ TG4SteppingAction::TG4SteppingAction()
   }
 
   fgInstance = this;
+
+  myfile.open("trackData.csv");
+  myfile << "event, track, x, y, z, px, py, pz\n";
+  lastTrackN = 0;
+  lastZPosition = -10000;
+  eventN = 0;
 }
 
 //_____________________________________________________________________________
 TG4SteppingAction::~TG4SteppingAction() 
 {
 /// Destructor
-
+  myfile.close();
   delete fSpecialControls;
 }
 
@@ -291,6 +297,25 @@ void TG4SteppingAction::LateInitialize()
 //_____________________________________________________________________________
 void TG4SteppingAction::UserSteppingAction(const G4Step* step)
 {
+
+  G4int pdg = step -> GetTrack() -> GetDynamicParticle() -> GetPDGcode();
+  if (std::abs(pdg) == 13){
+    G4ThreeVector position = step->GetPostStepPoint()->GetPosition();
+    position /=  TG4G3Units::Length();
+    if (position.z()> -7000. && position.z() < -3500.){
+
+      G4int trID = step->GetTrack()->GetTrackID();
+      if (trID < lastTrackN || lastZPosition > position.z()){
+        eventN+=1;
+      }
+      G4ThreeVector momentum = step -> GetTrack() -> GetDynamicParticle()->GetMomentum();
+        // myfile << "event, track, x, y, z, px, py, pz\n";
+      myfile << eventN<<", "<<trID<<", "<<position.x()<<", "<<position.y()<<", "<<position.z()<<", "<<momentum.x()<<", "<<momentum.y()<<", "<<momentum.z()<<std::endl;
+      lastZPosition = position.z();
+      lastTrackN = trID;
+    }
+
+  }
 /// Called by G4 kernel at the end of each step.
 /// This method should not be overridden in a Geant4 VMC user class;
 /// there is defined SteppingAction(const G4Step* step) method
