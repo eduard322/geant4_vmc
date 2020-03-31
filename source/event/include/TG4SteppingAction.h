@@ -24,6 +24,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 class TG4SpecialControlsV2;
 class TG4TrackManager;
@@ -66,6 +67,7 @@ class TG4SteppingAction : public G4UserSteppingAction
                   // the following method should not
                   // be overwritten in a derived class
     virtual void UserSteppingAction(const G4Step* step);
+    std::vector<std::vector<double>> tracksInfo;
 
     // set methods
     void SetLoopVerboseLevel(G4int level);
