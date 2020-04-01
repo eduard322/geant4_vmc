@@ -65,6 +65,7 @@ TG4SteppingAction::TG4SteppingAction()
   lastTrackN = 0;
   lastZPosition = -10000;
   eventN = 0;
+  tracksInfo.clear();
 }
 
 //_____________________________________________________________________________
@@ -318,7 +319,7 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
       lastTrackN = trID;
     }
     G4String volumeName = step->GetPostStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetName();
-    if (volumeName.find("Veto") != std::string::npos && !tracksInfo.empty()){
+    if (position.z()> 3790. && !tracksInfo.empty() && std::abs(position.x()) < 190. && std::abs(position.y()) < 360.){
         for (std::vector<double> myVect:tracksInfo){
           for (int i = 0; i < 8; ++i)
           {
