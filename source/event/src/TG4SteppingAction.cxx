@@ -60,11 +60,11 @@ TG4SteppingAction::TG4SteppingAction()
 
   fgInstance = this;
 
-  myfile.open("trackData.csv");
-  myfile << "event, track, x, y, z, px, py, pz\n";
-  lastTrackN = 0;
-  lastZPosition = -10000;
-  eventN = 0;
+  // myfile.open("trackData.csv");
+  // myfile << "event, track, x, y, z, px, py, pz\n";
+  // lastTrackN = 0;
+  // lastZPosition = -10000;
+  // eventN = 0;
   tracksInfo.clear();
 }
 
@@ -299,42 +299,42 @@ void TG4SteppingAction::LateInitialize()
 void TG4SteppingAction::UserSteppingAction(const G4Step* step)
 {
 
-  G4int pdg = step -> GetTrack() -> GetDynamicParticle() -> GetPDGcode();
-  if (std::abs(pdg) == 13){
-    G4ThreeVector position = step->GetPostStepPoint()->GetPosition();
-    position /=  TG4G3Units::Length();
-    if (position.z()> -7000. && position.z() < -3200.){
+  // G4int pdg = step -> GetTrack() -> GetDynamicParticle() -> GetPDGcode();
+  // if (std::abs(pdg) == 13){
+  //   G4ThreeVector position = step->GetPostStepPoint()->GetPosition();
+  //   position /=  TG4G3Units::Length();
+  //   if (position.z()> -7000. && position.z() < -3200.){
 
-      G4int trID = step->GetTrack()->GetTrackID();
-      if (trID < lastTrackN || lastZPosition > position.z()){
-        eventN+=1;
-        tracksInfo.clear();
-      }
-      G4ThreeVector momentum = step -> GetTrack() -> GetDynamicParticle()->GetMomentum();
-        // myfile << "event, track, x, y, z, px, py, pz\n";
-      std::vector<double> mTempVect {eventN, trID, position.x(), position.y(), position.z(), momentum.x(), momentum.y(), momentum.z()};
-      tracksInfo.push_back(mTempVect);
-      //myfile << eventN<<", "<<trID<<", "<<position.x()<<", "<<position.y()<<", "<<position.z()<<", "<<momentum.x()<<", "<<momentum.y()<<", "<<momentum.z()<<std::endl;
-      lastZPosition = position.z();
-      lastTrackN = trID;
-    }
-   // G4String volumeName = step->GetPostStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetName();
-    if (position.z()> 3790. && !tracksInfo.empty() && std::abs(position.x()) < 190. && std::abs(position.y()) < 360.){
-        for (std::vector<double> myVect:tracksInfo){
-          for (int i = 0; i < 8; ++i)
-          {
-            myfile << myVect.at(i);
-            if(i!=7){
-              myfile <<", ";
-            }else{
-              myfile<<std::endl;
-            }
-          }
-        }
-        tracksInfo.clear();
-    }
+  //     G4int trID = step->GetTrack()->GetTrackID();
+  //     if (trID < lastTrackN || lastZPosition > position.z()){
+  //       eventN+=1;
+  //       tracksInfo.clear();
+  //     }
+  //     G4ThreeVector momentum = step -> GetTrack() -> GetDynamicParticle()->GetMomentum();
+  //       // myfile << "event, track, x, y, z, px, py, pz\n";
+  //     std::vector<double> mTempVect {eventN, trID, position.x(), position.y(), position.z(), momentum.x(), momentum.y(), momentum.z()};
+  //     tracksInfo.push_back(mTempVect);
+  //     //myfile << eventN<<", "<<trID<<", "<<position.x()<<", "<<position.y()<<", "<<position.z()<<", "<<momentum.x()<<", "<<momentum.y()<<", "<<momentum.z()<<std::endl;
+  //     lastZPosition = position.z();
+  //     lastTrackN = trID;
+  //   }
+  //  // G4String volumeName = step->GetPostStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetName();
+  //   if (position.z()> 3790. && !tracksInfo.empty() && std::abs(position.x()) < 190. && std::abs(position.y()) < 360.){
+  //       for (std::vector<double> myVect:tracksInfo){
+  //         for (int i = 0; i < 8; ++i)
+  //         {
+  //           myfile << myVect.at(i);
+  //           if(i!=7){
+  //             myfile <<", ";
+  //           }else{
+  //             myfile<<std::endl;
+  //           }
+  //         }
+  //       }
+  //       tracksInfo.clear();
+  //   }
 
-  }
+  // }
 /// Called by G4 kernel at the end of each step.
 /// This method should not be overridden in a Geant4 VMC user class;
 /// there is defined SteppingAction(const G4Step* step) method
