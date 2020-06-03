@@ -318,7 +318,7 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
       lastZPosition = position.z();
       lastTrackN = trID;
     }
-    G4String volumeName = step->GetPostStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetName();
+   // G4String volumeName = step->GetPostStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetName();
     if (position.z()> 3790. && !tracksInfo.empty() && std::abs(position.x()) < 190. && std::abs(position.y()) < 360.){
         for (std::vector<double> myVect:tracksInfo){
           for (int i = 0; i < 8; ++i)
