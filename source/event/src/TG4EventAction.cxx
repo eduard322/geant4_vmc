@@ -18,6 +18,7 @@
 #include "TG4TrackManager.h"
 #include "TG4StateManager.h"
 #include "TG4Globals.h"
+#include "TG4GeometryManager.h"
 
 #include <G4Event.hh>
 #include <G4TrajectoryContainer.hh>
@@ -74,6 +75,7 @@ void TG4EventAction::LateInitialize()
 //_____________________________________________________________________________
 void TG4EventAction::BeginOfEventAction(const G4Event* event)
 {
+  TG4GeometryManager::Instance()->UpdateMagField();
 /// Called by G4 kernel at the beginning of event.
 
   // reset the tracks counters
@@ -107,6 +109,7 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
     G4cout << ">>> Event " << event->GetEventID() << G4endl;
     fTimer.Start();
   }  
+  TG4GeometryManager
 }
 
 //_____________________________________________________________________________
