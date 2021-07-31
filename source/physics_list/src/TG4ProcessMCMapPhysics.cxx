@@ -239,9 +239,10 @@ void TG4ProcessMCMapPhysics::FillMap()
   mcMap->Add("specialCutForElectron", kPStop); 
   mcMap->Add("MinEkineCuts", kPStop); 
   mcMap->Add("G4MinEkineCuts", kPStop); 
-  mcMap->Add("MaxTimeCuts", kPStop); 
+  mcMap->Add("MaxTimeCuts", kPStop);
+  mcMap->Add("G4MaxTimeCuts", kPStop);
   mcMap->Add("stackPopper", kPUserDefined);   
-}  
+}
 //
 // protected methods
 //
@@ -269,6 +270,9 @@ void TG4ProcessMCMapPhysics::ConstructProcess()
   aParticleIterator->reset();
   while ((*aParticleIterator)())
   {
+    // skip iteration if particle does not have a process manager
+    if ( ! aParticleIterator->value()->GetProcessManager() ) continue;
+
     G4ProcessVector* processVector 
       = aParticleIterator->value()->GetProcessManager()->GetProcessList();
 

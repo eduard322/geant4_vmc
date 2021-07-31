@@ -24,11 +24,10 @@
 #include "TG4Globals.h"
 #include "TGeant4.h"
 
-#include <G4AutoDelete.hh>
-
 #include <TROOT.h>
 #include <TInterpreter.h>
 #include <TVirtualMCApplication.h>
+#include <RVersion.h>
 
 //_____________________________________________________________________________
 TG4ActionInitialization::TG4ActionInitialization(
@@ -111,7 +110,9 @@ void TG4ActionInitialization::Build() const
     }
     TGeant4::MasterInstance()->CloneForWorker();
     TVirtualMCApplication::Instance()->InitForWorker(); // deprecated
+#if ( ROOT_VERSION_CODE >= ROOT_VERSION(6,10,0) )
     TVirtualMCApplication::Instance()->InitOnWorker();  // new
+#endif
 
     // Create actions on workers
     eventAction = fRunConfiguration->CreateEventAction();

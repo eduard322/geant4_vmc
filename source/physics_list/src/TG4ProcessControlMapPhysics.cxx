@@ -66,10 +66,10 @@ void TG4ProcessControlMapPhysics::FillMap()
   controlMap->Add("eCoulombScat", kMULS);
   controlMap->Add("nuclearStopping", kMULS);
 
-  controlMap->Add("eIoni", kLOSS); 
-  controlMap->Add("muIoni", kLOSS); 
-  controlMap->Add("hIoni", kLOSS); 
-  controlMap->Add("ionIoni", kLOSS); 
+  controlMap->Add("eIoni", kG3LOSS);
+  controlMap->Add("muIoni", kG3LOSS);
+  controlMap->Add("hIoni", kG3LOSS);
+  controlMap->Add("ionIoni", kG3LOSS);
 
   controlMap->Add("Decay", kDCAY); 
   controlMap->Add("RadioactiveDecay", kDCAY); 
@@ -238,8 +238,12 @@ void TG4ProcessControlMapPhysics::ConstructProcess()
   aParticleIterator->reset();
   while ((*aParticleIterator)())
   {
+    // skip iteration if particle does not have a process manager
+    if ( ! aParticleIterator->value()->GetProcessManager() ) continue;
+
     G4ProcessVector* processVector 
       = aParticleIterator->value()->GetProcessManager()->GetProcessList();
+
 
     for (G4int i=0; i<processVector->length(); i++) {
     
@@ -262,7 +266,8 @@ void TG4ProcessControlMapPhysics::ConstructProcess()
            processName != "stackPopper" &&
            processName != "GammaXTRadiator" &&
            processName != "StrawXTRadiator" &&
-           processName != "RegularXTRadiator") {
+           processName != "RegularXTRadiator" &&
+           processName != "G4MaxTimeCuts" ) {
            
         G4String text = "Unknown process control for ";
         text += processName;

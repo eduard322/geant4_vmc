@@ -13,6 +13,7 @@
 /// \author I. Hrivnacova; IPN, Orsay
 
 #include "TG4GeometryServices.h"
+#include "TG4MagneticField.h" 
 #include "TG4MediumMap.h"
 #include "TG4Medium.h"
 #include "TG4Limits.h"
@@ -24,6 +25,7 @@
 
 #include <G4LogicalVolumeStore.hh>
 #include <G4LogicalVolume.hh>
+#include <G4FieldManager.hh>
 #include <G4PhysicalVolumeStore.hh>
 #include <G4VPhysicalVolume.hh>
 #include <G4Material.hh>
@@ -492,7 +494,17 @@ void TG4GeometryServices::PrintVolumeLimits(const G4String& volumeName) const
       G4cout << "has not the limits set." << G4endl;
   }    
 }            
-
+void TG4GeometryServices::GetField(const G4String& volumeName, const G4double point[3], G4double bfield[3]) const 
+{
+/// Find a logical volume with the specified name and  
+/// prints magnetic field at local point. 
+    G4LogicalVolume* lv = FindLogicalVolume(volumeName, false);
+    G4FieldManager* fm = lv->GetFieldManager();
+    if (fm) {
+       TG4MagneticField* fi = (TG4MagneticField*)fm->GetDetectorField();
+       fi->GetFieldValue(point,bfield);
+    }
+}
 //_____________________________________________________________________________
 void TG4GeometryServices::PrintStatistics(G4bool open, G4bool close) const
 {
