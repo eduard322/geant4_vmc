@@ -378,7 +378,7 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
 
   
 //    G4cout<<"STEPPING ACTION!"<<G4endl;
-    G4Track* aTrack = aStep->GetTrack();
+    G4Track* aTrack = step->GetTrack();
     G4int MyTrackID= aTrack->GetTrackID();
     
     int i, nip=5;
@@ -418,8 +418,8 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
     G4String myprocess2="An_post";        
     G4String part_proc1, part_proc2;
     
-    G4StepPoint* MyPreStepPoint=aStep->GetPreStepPoint();
-    G4StepPoint* MyPostStepPoint=aStep->GetPostStepPoint();
+    G4StepPoint* MyPreStepPoint=step->GetPreStepPoint();
+    G4StepPoint* MyPostStepPoint=step->GetPostStepPoint();
     G4VPhysicalVolume* MyPreStepVolume= MyPreStepPoint->GetPhysicalVolume();
     G4VPhysicalVolume* MyPostStepVolume= MyPostStepPoint->GetPhysicalVolume();
 
@@ -446,15 +446,15 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
 //      const G4VProcess* PostStepProcess=MyPostStepPoint->GetProcessDefinedStep();
 //      const G4VProcess* MyCreatorProcess = aTrack->GetCreatorProcess();
 
-            if(aStep->GetTrack()->GetCreatorProcess()){ 
-      myprocess = aStep->GetTrack()->GetCreatorProcess()->GetProcessName();}
+            if(step->GetTrack()->GetCreatorProcess()){ 
+      myprocess = step->GetTrack()->GetCreatorProcess()->GetProcessName();}
 
 //      G4cout<<myprocess<<G4endl;
 
-             const G4VProcess* process = aStep->GetPostStepPoint()->GetProcessDefinedStep();
+             const G4VProcess* process = step->GetPostStepPoint()->GetProcessDefinedStep();
              if(process) myprocess1 =process ->GetProcessName();
              
-              process = aStep->GetPreStepPoint()->GetProcessDefinedStep();
+              process = step->GetPreStepPoint()->GetProcessDefinedStep();
              if(process) myprocess2 =process ->GetProcessName();
 
 
@@ -553,7 +553,7 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
           mstnumb= aTrack-> GetCurrentStepNumber();
 
 
-G4double edepStep = aStep->GetTotalEnergyDeposit(); 
+G4double edepStep = step->GetTotalEnergyDeposit(); 
 //fprintf(fp2,"   mstnumb=%d   zz=   %7.6e cm,    edepStep=  %7.6e \n",  mstnumb,  zz/cm,  edepStep);           
 
 //processName="muMsc"
