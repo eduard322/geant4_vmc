@@ -31,14 +31,10 @@
 #include <TVirtualMCApplication.h>
 #include "G4SystemOfUnits.hh"
 
-extern G4int  Nev;
-extern G4int n_muMsc, n_muPP, n_muBr,n_muSS;
-extern G4int nscat;
-
-extern FILE *fp2;
-extern FILE *fp5;
-extern FILE *fp55;
-extern FILE *fp6;
+FILE *fp2;
+FILE *fp5;
+FILE *fp55;
+FILE *fp6;
 
 // static data members
 G4ThreadLocal TG4SteppingAction* TG4SteppingAction::fgInstance = 0;

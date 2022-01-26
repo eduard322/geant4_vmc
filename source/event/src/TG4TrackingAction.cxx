@@ -35,11 +35,11 @@
 #include <G4UImanager.hh>
 
 // static data members
-extern G4int n_muMsc, n_muPP, n_muBr,n_muSS;
-extern G4int nscat;
+#include "TG4SteppingAction.h"
 
 G4ThreadLocal TG4TrackingAction* TG4TrackingAction::fgInstance = 0;
-
+G4int n_muMsc, n_muPP, n_muBr,n_muSS;
+G4int nscat
 //_____________________________________________________________________________
 TG4TrackingAction::TG4TrackingAction()
   : G4UserTrackingAction(),

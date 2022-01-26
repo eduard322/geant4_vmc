@@ -35,7 +35,9 @@
 #include <TVirtualMCStack.h>
 
 #include <math.h>
-extern G4int  Nev;
+#include<TG4SteppingAction.h>
+
+G4int Nev;
 //_____________________________________________________________________________
 TG4EventAction::TG4EventAction()
   : TG4Verbose("eventAction"),
