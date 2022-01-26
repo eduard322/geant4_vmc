@@ -35,6 +35,9 @@
 #include <G4UImanager.hh>
 
 // static data members
+extern G4int n_muMsc, n_muPP, n_muBr,n_muSS;
+extern G4int nscat;
+
 G4ThreadLocal TG4TrackingAction* TG4TrackingAction::fgInstance = 0;
 
 //_____________________________________________________________________________
@@ -162,6 +165,11 @@ void TG4TrackingAction::PrepareNewEvent()
 //_____________________________________________________________________________
 void TG4TrackingAction::PreUserTrackingAction(const G4Track* track)
 {
+  nscat = 0;
+  n_muMsc = 0;
+  n_muPP = 0; 
+  n_muBr = 0;
+  n_muSS = 0;
   /// Called by G4 kernel before starting tracking.
 
   // do not call this function more than once

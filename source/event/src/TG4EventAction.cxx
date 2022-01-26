@@ -35,7 +35,7 @@
 #include <TVirtualMCStack.h>
 
 #include <math.h>
-
+extern G4int  Nev;
 //_____________________________________________________________________________
 TG4EventAction::TG4EventAction()
   : TG4Verbose("eventAction"),
@@ -50,6 +50,7 @@ TG4EventAction::TG4EventAction()
     fSaveRandomStatus(false),
     fIsInterruptibleEvent(false)
 {
+
   /// Default constructor
 }
 
@@ -67,7 +68,7 @@ TG4EventAction::~TG4EventAction()
 void TG4EventAction::LateInitialize()
 {
   /// Cache thread-local pointers
-
+  Nev = 0;
   fMCApplication = TVirtualMCApplication::Instance();
   fTrackingAction = TG4TrackingAction::Instance();
   fTrackManager = TG4TrackManager::Instance();
@@ -109,6 +110,7 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
     G4cout << ">>> Event " << event->GetEventID() << G4endl;
     fTimer.Start();
   }
+  Nev = event->GetEventID();
 }
 
 //_____________________________________________________________________________
