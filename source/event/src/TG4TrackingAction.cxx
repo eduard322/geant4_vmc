@@ -39,7 +39,7 @@
 
 G4ThreadLocal TG4TrackingAction* TG4TrackingAction::fgInstance = 0;
 G4int n_muMsc, n_muPP, n_muBr,n_muSS;
-G4int nscat
+G4int nscat;
 //_____________________________________________________________________________
 TG4TrackingAction::TG4TrackingAction()
   : G4UserTrackingAction(),
