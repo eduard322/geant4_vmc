@@ -503,7 +503,7 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
         if (MyParticleName=="e+")  {PPCH=3;pant= -11;}
         if (MyParticleName=="e-") {PPCH=4;pant= 11;}
         if (MyParticleName=="mu-") {PPCH=5;pant= 13;}
-        if (MyParticleName=="mu+") {PPCH=6;pant= -13;}
+        if (MyParticleName=="mu+") {PPCH=5;pant= -13;}
         if (MyParticleName=="proton"){PPCH=7;pant= 2212;}
         if (MyParticleName=="D0") {PPCH=8; pant= 421;}
         if (MyParticleName=="kaon-") {PPCH=9;pant= -321;}
