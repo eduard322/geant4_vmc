@@ -32,14 +32,11 @@ class TVirtualMCApplication;
 class G4Track;
 class G4Step;
 
-extern G4int  Nev;
+extern G4int  Nev, nTrack;
 extern G4int n_muMsc, n_muPP, n_muBr,n_muSS;
 extern G4int nscat;
 
-extern FILE *fp2;
-extern FILE *fp5;
-extern FILE *fp55;
-extern FILE *fp6;
+
 
 
 /// \ingroup event
@@ -62,6 +59,10 @@ class TG4SteppingAction : public G4UserSteppingAction
   };
 
  public:
+  FILE *fp2;
+  FILE *fp5;
+  FILE *fp55;
+  FILE *fp6;
   TG4SteppingAction();
   virtual ~TG4SteppingAction();
 

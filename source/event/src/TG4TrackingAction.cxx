@@ -39,7 +39,7 @@
 
 G4ThreadLocal TG4TrackingAction* TG4TrackingAction::fgInstance = 0;
 G4int n_muMsc, n_muPP, n_muBr,n_muSS;
-G4int nscat;
+G4int nscat, nTrack;
 //_____________________________________________________________________________
 TG4TrackingAction::TG4TrackingAction()
   : G4UserTrackingAction(),
@@ -170,6 +170,7 @@ void TG4TrackingAction::PreUserTrackingAction(const G4Track* track)
   n_muPP = 0; 
   n_muBr = 0;
   n_muSS = 0;
+  nTrack = track->GetTrackID();
   /// Called by G4 kernel before starting tracking.
 
   // do not call this function more than once

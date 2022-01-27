@@ -31,10 +31,10 @@
 #include <TVirtualMCApplication.h>
 #include "G4SystemOfUnits.hh"
 
-FILE *fp2;
-FILE *fp5;
-FILE *fp55;
-FILE *fp6;
+// FILE *fp2;
+// FILE *fp5;
+// FILE *fp55;
+// FILE *fp6;
 
 // static data members
 G4ThreadLocal TG4SteppingAction* TG4SteppingAction::fgInstance = 0;
@@ -70,7 +70,10 @@ TG4SteppingAction::TG4SteppingAction()
 TG4SteppingAction::~TG4SteppingAction()
 {
   /// Destructor
-
+  fclose(fp5);
+  fclose(fp55);
+  fclose(fp2);
+  fclose(fp6);
   delete fSpecialControls;
 }
 
@@ -282,6 +285,11 @@ void TG4SteppingAction::PrintTrackInfo(const G4Track* track) const
 //_____________________________________________________________________________
 void TG4SteppingAction::LateInitialize()
 {
+  fp2=fopen( "mu-trec-info-opt0-exp-0-1cm","a");
+  fp5=fopen("mu-scattering-info-opt0-exp-0-1cm","a");
+  fp55=fopen("mu-coul-scatt-delta","a");    
+  fp6=fopen("mu-end-point-opt0-exp-0-1cm","a");
+
   fMCApplication = TVirtualMCApplication::Instance();
   fTrackManager = TG4TrackManager::Instance();
   fStepManager = TG4StepManager::Instance();
@@ -383,10 +391,7 @@ void TG4SteppingAction::UserSteppingAction(const G4Step* step)
 
 
   
-    fp2=fopen( "mu-trec-info-opt0-exp-0-1cm","a");
-    fp5=fopen("mu-scattering-info-opt0-exp-0-1cm","a");
-    fp55=fopen("mu-coul-scatt-delta","a");    
-    fp6=fopen("mu-end-point-opt0-exp-0-1cm","a");
+
 
     
     G4double x,y,z;
@@ -557,8 +562,8 @@ int ilev=zz/cm;
   nscat++;
 
 if (PPCH==5){
- fprintf(fp5,"%d  %d  %d  %d 888  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %d %d %d\n",
- Nev, pant, ilev, nscat, xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
+ fprintf(fp5,"%d  %d  %d  %d  %d 888  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %d %d %d\n",
+ Nev, nTrack, pant, ilev, nscat, xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
 n_muPP++; G4cout<<"n_muCoulombScat="<<n_muPP<<G4endl;
 
 double p_pre=sqrt(pmx_pre*pmx_pre+pmy_pre*pmy_pre+pmz_pre*pmz_pre);
@@ -571,23 +576,23 @@ double teta_z_post=acos(pmz_post/p_post);
 double delta_teta=teta_z_post-teta_z_pre;
 
 
- fprintf(fp55,"%d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e \n",
-     Nev, pant, nscat, zz/cm, MyKineticEnergyPre/GeV,MyKineticEnergyPost/GeV,delta_pz/GeV,teta_z_pre, teta_z_post, delta_teta);
+ fprintf(fp55,"%d  %d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e \n",
+     Nev, nTrack, pant, nscat, zz/cm, MyKineticEnergyPre/GeV,MyKineticEnergyPost/GeV,delta_pz/GeV,teta_z_pre, teta_z_post, delta_teta);
             }}
 
    
 if (PPCH==5 && MyKineticEnergyPost==0.0 &&  MyKineticEnergyPre==0.0)
- fprintf(fp6,"%d  %d  %d  %d 777  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %d %d %d\n",
- Nev,pant,ilev , nscat, xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
+ fprintf(fp6,"%d  %d  %d  %d  %d 777  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %d %d %d\n",
+ Nev, nTrack, pant,ilev , nscat, xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
 
 
 if ( PPCH==5   &&  nscat == 0 )
- fprintf(fp5,"%d  %d  %d  0  777  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d  %d\n",
- Nev,pant,ilev,  xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
+ fprintf(fp5,"%d  %d  %d  %d  0  777  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d  %d\n",
+ Nev, nTrack, pant,ilev,  xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
 
 if ( PPCH==5   &&  nscat > 0 )
- fprintf(fp5,"%d  %d  %d  %d  333   %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d  %d\n",
- Nev,pant,ilev,nscat, xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
+ fprintf(fp5,"%d  %d  %d  %d  %d  333   %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d  %d\n",
+ Nev, nTrack, pant,ilev,nscat, xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
 
 
    
@@ -597,8 +602,8 @@ if ( PPCH==5   &&  nscat > 0 )
 
 if (PPCH==5){
         for (i=0; i<50;i++) {
-fprintf(fp2,"%d  00%d  %d   %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d  %d\n",
-  i, Nev, pant,xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
+fprintf(fp2,"%d  00%d  %d  %d   %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d  %d\n",
+  i, Nev, nTrack, pant,xx/cm,yy/cm,zz/cm,MyKineticEnergyPost/GeV,pmx_post/GeV,pmy_post/GeV,pmz_post/GeV,PPCH,tr,mpid);
                             }
            }
           
@@ -614,9 +619,4 @@ fprintf(fp2,"%d  00%d  %d   %7.6e  %7.6e  %7.6e  %7.6e  %7.6e %7.6e  %7.6e %d %d
       }  
   }}
       }
-            fclose(fp5);
-            fclose(fp55);
-            fclose(fp2);
-            fclose(fp6);
-
 }
