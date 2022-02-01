@@ -38,6 +38,8 @@
 #include<TG4SteppingAction.h>
 
 G4int Nev;
+G4int wiriteFlag;
+std::vector<eventInfo> eInf;
 //_____________________________________________________________________________
 TG4EventAction::TG4EventAction()
   : TG4Verbose("eventAction"),
@@ -59,6 +61,7 @@ TG4EventAction::TG4EventAction()
 //_____________________________________________________________________________
 TG4EventAction::~TG4EventAction()
 {
+  fclose(fp);
   /// Destructor
 }
 
@@ -71,6 +74,8 @@ void TG4EventAction::LateInitialize()
 {
   /// Cache thread-local pointers
   Nev = 0;
+  fp=fopen( "muData.csv","a");
+  fprintf(fp,"eventID  trackID  pid  cScat  muBrems  pre_E  pre_px  pre_py  pre_pz  post_E  post_px  post_py  post_pz  x  y  z\n")
   fMCApplication = TVirtualMCApplication::Instance();
   fTrackingAction = TG4TrackingAction::Instance();
   fTrackManager = TG4TrackManager::Instance();
@@ -119,7 +124,14 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
 void TG4EventAction::EndOfEventAction(const G4Event* event)
 {
   /// Called by G4 kernel at the end of event.
-
+  for (auto info:eInf)
+  {
+    fprintf(fp,"%d  %d  %d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e\n",
+             info.eventID, eventID.trackID, info.pid, info.cScat, info.muBrems, info.pre_E, info.pre_px, info.pre_py, 
+             info.pre_pz, info.post_E, info.post_px, info.post_py, info.post_pz, info.x, info.y, info.z);
+  }
+  wiriteFlag = 0;
+  eInf.clear();
   // finish the last primary track of the current event
   // G4cout << "Finish primary from event action" << G4endl;
   fTrackingAction->FinishPrimaryTrack();

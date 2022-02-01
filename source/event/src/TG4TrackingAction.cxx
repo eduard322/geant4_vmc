@@ -38,8 +38,7 @@
 #include "TG4SteppingAction.h"
 
 G4ThreadLocal TG4TrackingAction* TG4TrackingAction::fgInstance = 0;
-G4int n_muMsc, n_muPP, n_muBr,n_muSS;
-G4int nscat, nTrack;
+G4int nTrack, pid;
 //_____________________________________________________________________________
 TG4TrackingAction::TG4TrackingAction()
   : G4UserTrackingAction(),
@@ -148,7 +147,6 @@ void TG4TrackingAction::LateInitialize()
 void TG4TrackingAction::PrepareNewEvent()
 {
   /// Called by G4 kernel at the beginning of event.
-
   // set g4 stepping manager pointer and world volume
   fStepManager->SetSteppingManager(fpTrackingManager->GetSteppingManager());
 
@@ -165,12 +163,8 @@ void TG4TrackingAction::PrepareNewEvent()
 //_____________________________________________________________________________
 void TG4TrackingAction::PreUserTrackingAction(const G4Track* track)
 {
-  nscat = 0;
-  n_muMsc = 0;
-  n_muPP = 0; 
-  n_muBr = 0;
-  n_muSS = 0;
   nTrack = track->GetTrackID();
+  pid = track->GetDynamicParticle()->GetPDGcode();
   /// Called by G4 kernel before starting tracking.
 
   // do not call this function more than once

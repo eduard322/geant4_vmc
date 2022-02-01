@@ -22,6 +22,9 @@
 
 #include <globals.hh>
 
+#include "TG4EventAction.h"
+#include <vector>
+
 class TG4SpecialControlsV2;
 class TG4TrackManager;
 class TG4StepManager;
@@ -32,12 +35,9 @@ class TVirtualMCApplication;
 class G4Track;
 class G4Step;
 
-extern G4int  Nev, nTrack;
-extern G4int n_muMsc, n_muPP, n_muBr,n_muSS;
-extern G4int nscat;
-
-
-
+extern G4int  Nev, nTrack, pid;
+extern G4int wiriteFlag;
+extern std::vector<eventInfo> eInf; 
 
 /// \ingroup event
 /// \brief Actions at each step
@@ -59,10 +59,7 @@ class TG4SteppingAction : public G4UserSteppingAction
   };
 
  public:
-  FILE *fp2;
-  FILE *fp5;
-  FILE *fp55;
-  FILE *fp6;
+  G4int cScat, bremsScat;
   TG4SteppingAction();
   virtual ~TG4SteppingAction();
 

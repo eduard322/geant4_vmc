@@ -37,9 +37,31 @@ class G4Event;
 ///
 /// \author I. Hrivnacova; IPN, Orsay
 
+struct eventInfo
+{
+  int eventID;
+  int trackID;
+  int pid;
+  int cScat;
+  int muBrems;
+  double pre_E;
+  double pre_px;
+  double pre_py;
+  double pre_pz;
+  double post_E;
+  double post_px;
+  double post_py;
+  double post_pz;
+  double x;
+  double y;
+  double z;
+};
+
 class TG4EventAction : public G4UserEventAction, public TG4Verbose
 {
  public:
+  FILE *fp;
+
   TG4EventAction();
   virtual ~TG4EventAction();
 
