@@ -124,11 +124,13 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
 void TG4EventAction::EndOfEventAction(const G4Event* event)
 {
   /// Called by G4 kernel at the end of event.
-  for (auto info:eInf)
-  {
-    fprintf(fp,"%d  %d  %d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e\n",
-             info.eventID, info.trackID, info.pid, info.cScat, info.muBrems, info.pre_E, info.pre_px, info.pre_py, 
-             info.pre_pz, info.post_E, info.post_px, info.post_py, info.post_pz, info.x, info.y, info.z);
+  if (wiriteFlag){
+    for (auto info:eInf)
+    {
+      fprintf(fp,"%d  %d  %d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e\n",
+               info.eventID, info.trackID, info.pid, info.cScat, info.muBrems, info.pre_E, info.pre_px, info.pre_py, 
+               info.pre_pz, info.post_E, info.post_px, info.post_py, info.post_pz, info.x, info.y, info.z);
+    }
   }
   wiriteFlag = 0;
   eInf.clear();
