@@ -398,7 +398,7 @@ G4ThreeVector postMomentum = MyPostStepPoint->GetMomentum();
 G4ThreeVector preMomentum = MyPreStepPoint->GetMomentum();
 
 eInf.push_back(eventInfo {Nev, nTrack, pid, cScat, bremsScat, 
-                          MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV,
                           MyKineticEnergyPre/GeV,  preMomentum[0]/GeV, preMomentum[1]/GeV, preMomentum[2]/GeV,
+                          MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV,
                           postPosition[0]/cm, postPosition[1]/cm, postPosition[2]/cm});
 }
