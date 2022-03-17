@@ -38,6 +38,8 @@ class G4Step;
 extern G4int  Nev, nTrack, pid;
 extern G4int wiriteFlag;
 extern std::vector<eventInfo> eInf; 
+extern std::vector<shortEventInfo> stepInf; 
+
 
 /// \ingroup event
 /// \brief Actions at each step

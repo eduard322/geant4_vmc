@@ -40,6 +40,7 @@
 G4int Nev;
 G4int wiriteFlag;
 std::vector<eventInfo> eInf;
+std::vector<shortEventInfo> stepInf;
 //_____________________________________________________________________________
 TG4EventAction::TG4EventAction()
   : TG4Verbose("eventAction"),
@@ -62,6 +63,7 @@ TG4EventAction::TG4EventAction()
 TG4EventAction::~TG4EventAction()
 {
   fclose(fp);
+  fclose(fpStep);
   /// Destructor
 }
 
@@ -76,6 +78,8 @@ void TG4EventAction::LateInitialize()
   Nev = 0;
   fp=fopen( "muData.csv","a");
   fprintf(fp,"eventID  trackID  pid  cScat  muBrems  pre_E  pre_px  pre_py  pre_pz  post_E  post_px  post_py  post_pz  x  y  z\n");
+  fpStep = fopen("stepData.csv", "a")
+  fprintf(fpStep,"eventID  trackID  pid  post_E  post_px  post_py  post_pz  x  y  z\n");
   fMCApplication = TVirtualMCApplication::Instance();
   fTrackingAction = TG4TrackingAction::Instance();
   fTrackManager = TG4TrackManager::Instance();
@@ -117,6 +121,11 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
     G4cout << ">>> Event " << event->GetEventID() << G4endl;
     fTimer.Start();
   }
+  long seeds[10];
+  seeds[0] = gRandom->GetSeed();    
+  seeds[1] = gRandom->GetSeed();    
+  seeds[2] = 0;    
+  CLHEP::HepRandom::setTheSeeds(seeds);
   Nev = event->GetEventID();
 }
 
@@ -130,6 +139,11 @@ void TG4EventAction::EndOfEventAction(const G4Event* event)
       fprintf(fp,"%d  %d  %d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e\n",
                info.eventID, info.trackID, info.pid, info.cScat, info.muBrems, info.pre_E, info.pre_px, info.pre_py, 
                info.pre_pz, info.post_E, info.post_px, info.post_py, info.post_pz, info.x, info.y, info.z);
+    }
+    for (auto info:stepInf)
+    {
+      fprintf(fpStep,"%d  %d  %d  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e  %7.6e\n",
+               info.eventID, info.trackID, info.pid, info.post_E, info.post_px, info.post_py, info.post_pz, info.x, info.y, info.z);
     }
   }
   wiriteFlag = 0;

@@ -57,11 +57,25 @@ struct eventInfo
   double z;
 };
 
+struct shortEventInfo
+{
+  int eventID;
+  int trackID;
+  int pid;
+  double post_E;
+  double post_px;
+  double post_py;
+  double post_pz;
+  double x;
+  double y;
+  double z;
+};
+
 class TG4EventAction : public G4UserEventAction, public TG4Verbose
 {
  public:
   FILE *fp;
-
+  FILE *fpStep;
   TG4EventAction();
   virtual ~TG4EventAction();
 

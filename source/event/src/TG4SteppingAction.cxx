@@ -287,10 +287,6 @@ void TG4SteppingAction::PrintTrackInfo(const G4Track* track) const
 //_____________________________________________________________________________
 void TG4SteppingAction::LateInitialize()
 {
-  // fp2=fopen( "mu-trec-info-opt0-exp-0-1cm","a");
-  // fp5=fopen("mu-scattering-info-opt0-exp-0-1cm","a");
-  // fp55=fopen("mu-coul-scatt-delta","a");    
-  // fp6=fopen("mu-end-point-opt0-exp-0-1cm","a");
 
   fMCApplication = TVirtualMCApplication::Instance();
   fTrackManager = TG4TrackManager::Instance();
@@ -363,6 +359,10 @@ if (abs(pid)!=13)
 {
   return ;
 }
+
+/////////////////////step output/////////////////////
+stepInf.push_back(shortEventInfo {Nev, nTrack, pid, MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV, postPosition[0]/cm, postPosition[1]/cm, postPosition[2]/cm});
+/////////////////////step output/////////////////////
 
 G4String myprocess="An";   
 
