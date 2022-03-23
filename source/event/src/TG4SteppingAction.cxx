@@ -361,6 +361,19 @@ if (abs(pid)!=13)
 }
 
 /////////////////////step output/////////////////////
+G4double xx,yy,zz;
+G4double pmx_pre,pmy_pre,pmz_pre,pmx_post,pmy_post,pmz_post,ptot_pre,ptot_post;
+
+G4StepPoint* MyPreStepPoint=step->GetPreStepPoint();
+G4StepPoint* MyPostStepPoint=step->GetPostStepPoint();
+
+G4double MyKineticEnergyPre = MyPreStepPoint->GetKineticEnergy();
+G4double MyKineticEnergyPost = MyPostStepPoint->GetKineticEnergy();    
+
+G4ThreeVector postPosition  = MyPostStepPoint->GetPosition();
+G4ThreeVector postMomentum = MyPostStepPoint->GetMomentum();
+G4ThreeVector preMomentum = MyPreStepPoint->GetMomentum();
+
 stepInf.push_back(shortEventInfo {Nev, nTrack, pid, MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV, postPosition[0]/cm, postPosition[1]/cm, postPosition[2]/cm});
 /////////////////////step output/////////////////////
 
@@ -384,18 +397,6 @@ if (cScat == 0 && bremsScat == 0){
   return ;
 }
 
-G4double xx,yy,zz;
-G4double pmx_pre,pmy_pre,pmz_pre,pmx_post,pmy_post,pmz_post,ptot_pre,ptot_post;
-
-G4StepPoint* MyPreStepPoint=step->GetPreStepPoint();
-G4StepPoint* MyPostStepPoint=step->GetPostStepPoint();
-
-G4double MyKineticEnergyPre = MyPreStepPoint->GetKineticEnergy();
-G4double MyKineticEnergyPost = MyPostStepPoint->GetKineticEnergy();    
-
-G4ThreeVector postPosition  = MyPostStepPoint->GetPosition();
-G4ThreeVector postMomentum = MyPostStepPoint->GetMomentum();
-G4ThreeVector preMomentum = MyPreStepPoint->GetMomentum();
 
 eInf.push_back(eventInfo {Nev, nTrack, pid, cScat, bremsScat, 
                           MyKineticEnergyPre/GeV,  preMomentum[0]/GeV, preMomentum[1]/GeV, preMomentum[2]/GeV,

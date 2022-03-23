@@ -78,7 +78,7 @@ void TG4EventAction::LateInitialize()
   Nev = 0;
   fp=fopen( "muData.csv","a");
   fprintf(fp,"eventID  trackID  pid  cScat  muBrems  pre_E  pre_px  pre_py  pre_pz  post_E  post_px  post_py  post_pz  x  y  z\n");
-  fpStep = fopen("stepData.csv", "a")
+  fpStep = fopen("stepData.csv", "a");
   fprintf(fpStep,"eventID  trackID  pid  post_E  post_px  post_py  post_pz  x  y  z\n");
   fMCApplication = TVirtualMCApplication::Instance();
   fTrackingAction = TG4TrackingAction::Instance();
