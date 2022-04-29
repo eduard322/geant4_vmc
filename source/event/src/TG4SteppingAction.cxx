@@ -378,29 +378,4 @@ if (wiriteFlag==0 && MyPostStepPoint->GetPosition()[2]/cm > 3500.)
 stepInf.push_back(shortEventInfo {Nev, nTrack, pid, MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV, postPosition[0]/cm, postPosition[1]/cm, postPosition[2]/cm});
 /////////////////////step output/////////////////////
 
-G4String myprocess="An";   
-
-const G4VProcess* process = step->GetPreStepPoint()->GetProcessDefinedStep();
-if(process) {  //0 if step is limited just by user limits
-  myprocess = process ->GetProcessName();
-}else{
-  return ;
-}
-
-if(myprocess == "CoulombScat") {
-  cScat++;
-}
-if(myprocess == "muBrems") {
-  bremsScat++;
-}
-
-if (cScat == 0 && bremsScat == 0){
-  return ;
-}
-
-
-eInf.push_back(eventInfo {Nev, nTrack, pid, cScat, bremsScat, 
-                          MyKineticEnergyPre/GeV,  preMomentum[0]/GeV, preMomentum[1]/GeV, preMomentum[2]/GeV,
-                          MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV,
-                          postPosition[0]/cm, postPosition[1]/cm, postPosition[2]/cm});
 }
