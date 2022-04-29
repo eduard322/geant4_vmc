@@ -190,10 +190,6 @@ void TG4SteppingAction::ProcessTrackOnBoundary(const G4Step* step)
   if (step->GetTrack()->GetNextVolume() != 0) {
     // G4LogicalVolume* currLV= step->GetPreStepPoint()->GetPhysicalVolume()->GetLogicalVolume();
     // TGeoVolume* tgeoLV = gGeoManager->FindVolumeFast(currLV->GetName());
-    if (wiriteFlag==0 && (G4LogicalVolume*)step->GetPreStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetName().contains("Ecal"))
-    {
-      wiriteFlag = 1;
-    }
 
     // set back max step limit if it has been modified on fly by user
     G4UserLimits* modifiedLimits = fStepManager->GetLimitsModifiedOnFly();
@@ -373,6 +369,11 @@ G4double MyKineticEnergyPost = MyPostStepPoint->GetKineticEnergy();
 G4ThreeVector postPosition  = MyPostStepPoint->GetPosition();
 G4ThreeVector postMomentum = MyPostStepPoint->GetMomentum();
 G4ThreeVector preMomentum = MyPreStepPoint->GetMomentum();
+
+if (wiriteFlag==0 && MyPostStepPoint->GetPosition()[2]/cm > 3500.)
+    {
+      wiriteFlag = 1;
+    }
 
 stepInf.push_back(shortEventInfo {Nev, nTrack, pid, MyKineticEnergyPost/GeV,  postMomentum[0]/GeV, postMomentum[1]/GeV, postMomentum[2]/GeV, postPosition[0]/cm, postPosition[1]/cm, postPosition[2]/cm});
 /////////////////////step output/////////////////////
