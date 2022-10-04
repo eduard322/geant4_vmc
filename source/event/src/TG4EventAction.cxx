@@ -129,6 +129,7 @@ void TG4EventAction::BeginOfEventAction(const G4Event* event)
   Nev = event->GetEventID();
 }
 
+
 //_____________________________________________________________________________
 void TG4EventAction::EndOfEventAction(const G4Event* event)
 {
