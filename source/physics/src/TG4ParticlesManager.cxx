@@ -23,6 +23,8 @@
 #include <G4Monopole.hh>
 #include <G4ParticleDefinition.hh>
 #include <G4ParticleTable.hh>
+#include <G4Threading.hh>
+#include <G4Types.hh>
 #include <G4Version.hh>
 
 #include <TClonesArray.h>
@@ -466,7 +468,7 @@ G4int TG4ParticlesManager::GetPDGEncoding(G4ParticleDefinition* particle)
 
   // Get PDG encoding from G4 particle definition
   G4int pdgEncoding = particle->GetPDGEncoding();
-  if (pdgEncoding) {
+  if (pdgEncoding && (pdgEncoding != -22)) {
     // Add particle to TDatabasePDG
     if (!TDatabasePDG::Instance()->GetParticle(pdgEncoding))
       AddParticleToPdgDatabase(particle->GetParticleName(), particle);

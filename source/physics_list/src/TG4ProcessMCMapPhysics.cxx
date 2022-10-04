@@ -77,6 +77,7 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
 
   mcMap->Add("Decay", kPDecay);
   mcMap->Add("RadioactiveDecay", kPDecay);
+  mcMap->Add("RadioactiveDecayBase", kPDecay);
 
   mcMap->Add("compt", kPCompton);
   mcMap->Add("phot", kPPhotoelectric);
@@ -97,18 +98,20 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
 
   mcMap->Add("nCapture", kPNCapture);
   mcMap->Add("HadronCapture", kPNCapture);
+  mcMap->Add("hFritiofWithBinaryCascadeCaptureAtRest", kPNCapture);
   mcMap->Add("nFission", kPNuclearFission);
   mcMap->Add("HadronFission", kPNuclearFission);
 
-  mcMap->Add("PiMinusAbsorptionAtRest", kPNuclearAbsorption);
-  mcMap->Add("PiMinusAbsorptionBertini", kPNuclearAbsorption);
-  mcMap->Add("PionMinusAbsorptionAtRest", kPNuclearAbsorption);
-  mcMap->Add("KaonMinusAbsorption", kPNuclearAbsorption);
-  mcMap->Add("KaonMinusAbsorptionAtRest", kPNuclearAbsorption);
-  mcMap->Add("CHIPSNuclearCaptureAtRest", kPNuclearAbsorption);
-  mcMap->Add("FTFNuclearCaptureAtRest", kPNuclearAbsorption);
-  mcMap->Add("hFritiofCaptureAtRest", kPNuclearAbsorption);
-  mcMap->Add("hBertiniCaptureAtRest", kPNuclearAbsorption);
+  mcMap->Add("PiMinusAbsorptionAtRest", kPHadronic);
+  mcMap->Add("PiMinusAbsorptionBertini", kPHadronic);
+  mcMap->Add("PionMinusAbsorptionAtRest", kPHadronic);
+  mcMap->Add("KaonMinusAbsorption", kPHadronic);
+  mcMap->Add("KaonMinusAbsorptionAtRest", kPHadronic);
+  mcMap->Add("CHIPSNuclearCaptureAtRest", kPHadronic);
+  mcMap->Add("FTFNuclearCaptureAtRest", kPHadronic);
+  mcMap->Add("hFritiofCaptureAtRest", kPHadronic);
+  mcMap->Add("hBertiniCaptureAtRest", kPHadronic);
+  mcMap->Add("muMinusCaptureAtRest", kPHadronic);
 
   mcMap->Add("AntiProtonAnnihilationAtRest", kPPbarAnnihilation);
   mcMap->Add("AntiNeutronAnnihilationAtRest", kPNbarAnnihilation);
@@ -121,6 +124,20 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
   mcMap->Add("CHIPSElasticScattering", kPHElastic);
 
   mcMap->Add("inelastic", kPHInhelastic);
+  mcMap->Add("B+Inelastic", kPHInhelastic);
+  mcMap->Add("B-Inelastic", kPHInhelastic);
+  mcMap->Add("B0Inelastic", kPHInhelastic);
+  mcMap->Add("anti_B0Inelastic", kPHInhelastic);
+  mcMap->Add("Bc+Inelastic", kPHInhelastic);
+  mcMap->Add("Bc-Inelastic", kPHInhelastic);
+  mcMap->Add("Bs0Inelastic", kPHInhelastic);
+  mcMap->Add("anti_Bs0Inelastic", kPHInhelastic);
+  mcMap->Add("D+Inelastic", kPHInhelastic);
+  mcMap->Add("D-Inelastic", kPHInhelastic);
+  mcMap->Add("D0Inelastic", kPHInhelastic);
+  mcMap->Add("anti_D0Inelastic", kPHInhelastic);
+  mcMap->Add("Ds+Inelastic", kPHInhelastic);
+  mcMap->Add("Ds-Inelastic", kPHInhelastic);
   mcMap->Add("PionMinusInelastic", kPHInhelastic);
   mcMap->Add("pi-Inelastic", kPHInhelastic);
   mcMap->Add("PionPlusInelastic", kPHInhelastic);
@@ -135,7 +152,11 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
   mcMap->Add("kaon0SInelastic", kPHInhelastic);
   mcMap->Add("LambdaInelastic", kPHInhelastic);
   mcMap->Add("lambdaInelastic", kPHInhelastic);
+  mcMap->Add("lambda_bInelastic", kPHInhelastic);
+  mcMap->Add("lambda_c+Inelastic", kPHInhelastic);
   mcMap->Add("anti-lambdaInelastic", kPHInhelastic);
+  mcMap->Add("anti_lambda_bInelastic", kPHInhelastic);
+  mcMap->Add("anti_lambda_c+Inelastic", kPHInhelastic);
   mcMap->Add("ProtonInelastic", kPHInhelastic);
   mcMap->Add("protonInelastic", kPHInhelastic);
   mcMap->Add("AntiProtonInelastic", kPHInhelastic);
@@ -156,18 +177,31 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
   mcMap->Add("AntiSigmaPlusInelastic", kPHInhelastic);
   mcMap->Add("anti_sigma+Inelastic", kPHInhelastic);
   mcMap->Add("sigma0Inelastic", kPHInhelastic);
+  mcMap->Add("anti_sigma0Inelastic", kPHInhelastic);
   mcMap->Add("XiMinusInelastic", kPHInhelastic);
   mcMap->Add("xi-Inelastic", kPHInhelastic);
+  mcMap->Add("xi_b-Inelastic", kPHInhelastic);
+  mcMap->Add("xi_b0Inelastic", kPHInhelastic);
+  mcMap->Add("xi_c+Inelastic", kPHInhelastic);
+  mcMap->Add("xi_c0Inelastic", kPHInhelastic);
   mcMap->Add("AntiXiMinusInelastic", kPHInhelastic);
   mcMap->Add("anti_xi-Inelastic", kPHInhelastic);
+  mcMap->Add("anti_xi_b-Inelastic", kPHInhelastic);
+  mcMap->Add("anti_xi_b0Inelastic", kPHInhelastic);
+  mcMap->Add("anti_xi_c+Inelastic", kPHInhelastic);
+  mcMap->Add("anti_xi_c0Inelastic", kPHInhelastic);
   mcMap->Add("XiZeroInelastic", kPHInhelastic);
   mcMap->Add("xi0Inelastic", kPHInhelastic);
   mcMap->Add("AntiXiZeroInelastic", kPHInhelastic);
   mcMap->Add("anti_xi0Inelastic", kPHInhelastic);
   mcMap->Add("OmegaMinusInelastic", kPHInhelastic);
   mcMap->Add("omega-Inelastic", kPHInhelastic);
+  mcMap->Add("omega_b-Inelastic", kPHInhelastic);
+  mcMap->Add("omega_c0Inelastic", kPHInhelastic);
   mcMap->Add("AntiOmegaMinusInelastic", kPHInhelastic);
   mcMap->Add("anti_omega-Inelastic", kPHInhelastic);
+  mcMap->Add("anti_omega_b-Inelastic", kPHInhelastic);
+  mcMap->Add("anti_omega_c0Inelastic", kPHInhelastic);
   mcMap->Add("DeuteronInelastic", kPHInhelastic);
   mcMap->Add("dInelastic", kPHInhelastic);
   mcMap->Add("AntiDeuteronInelastic", kPHInhelastic);
@@ -191,11 +225,10 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
   mcMap->Add("CHIPS_Inelastic", kPHInhelastic);
   mcMap->Add("PhotonInelastic", kPPhotonInhelastic);
 
-  mcMap->Add("nKiller", kPHadronic);
+  mcMap->Add("nKiller", kPStop);
 
   mcMap->Add("muNucl", kPMuonNuclear);
   mcMap->Add("muonNuclear", kPMuonNuclear);
-  mcMap->Add("muMinusCaptureAtRest", kPMuonNuclear);
   mcMap->Add("PositronNuclear", kPPositronNuclear);
   mcMap->Add("positronNuclear", kPPositronNuclear);
   mcMap->Add("ElectroNuclear", kPElectronNuclear);
@@ -210,7 +243,8 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
   mcMap->Add("Rayl", kPRayleigh);
   mcMap->Add("OpBoundary", kPLightScattering);
   mcMap->Add("OpMieHG", kPLightScattering);
-  mcMap->Add("OpWLS", kPNull);
+  mcMap->Add("OpWLS", kPLightWLShifting);
+  mcMap->Add("OpWLS2", kPLightWLShifting);
 // Available since 6.07/03 and 5.34/35
 #if ((ROOT_VERSION_CODE >= ROOT_VERSION(6, 7, 3)) ||  \
      ((ROOT_VERSION_CODE <= ROOT_VERSION(6, 0, 0)) && \
@@ -243,7 +277,9 @@ void TG4ProcessMCMapPhysics::FillMap(G4bool isBiasing)
   mcMap->Add("G4MaxTimeCuts", kPStop);
   mcMap->Add("stackPopper", kPUserDefined);
 
+  mcMap->Add("biasLimiter", kStepMax);
   mcMap->Add("biasWrapper(0)", kPNull);
+  mcMap->Add("GammaGeneralProc", kPNull);
 }
 //
 // protected methods
@@ -277,7 +313,7 @@ void TG4ProcessMCMapPhysics::ConstructProcess()
     G4ProcessVector* processVector =
       aParticleIterator->value()->GetProcessManager()->GetProcessList();
 
-    for (G4int i = 0; i < processVector->length(); i++) {
+    for (size_t i = 0; i < processVector->length(); i++) {
 
       G4String processName = (*processVector)[i]->GetProcessName();
 

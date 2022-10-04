@@ -1,10 +1,11 @@
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g3a.C...
@@ -17,12 +18,12 @@ Processing test_E03_1.C("g3Config.C",kTRUE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant3 Virtual Monte Carlo 
- Version 3.0 ( 24 February 2020 )
+ Version 3.9 ( 3 December 2021 )
  WWW : https://vmc-project.github.io/
 =============================================================
 
@@ -52,13 +53,13 @@ Geant3 has been created.
    Absorber: total energy (MeV): 928.902       total track length (cm):  42.4529
    Gap:      total energy (MeV): 24.8971       total track length (cm):  10.8086
 
- MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   121171975     738F007 HEX
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   109011287     67F6157 HEX
 
  MZSTOR.  Initialize Store  0  in /GCBANK/
-          with Store/Table at absolute adrs   115761901   121171975
-                                        HEX     6E662ED     738F007
-                                        HEX    FFAD712A           0
-                              relative adrs    -5410518           0
+          with Store/Table at absolute adrs   103607589   109011287
+                                        HEX     62CED25     67F6157
+                                        HEX    FFAD8A12           0
+                              relative adrs    -5404142           0
           with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
           This store has a fence of   16 words.
 
@@ -97,13 +98,14 @@ Geant3 has been created.
  **** GTRIGI: IEVENT=      5 IDEVT=      5 Random Seeds =       4357           0
  GTREVE_ROOT : Transporting primary track No         20
  GTREVE_ROOT : Transporting primary track No         10
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g3a.C...
@@ -117,12 +119,12 @@ Processing test_E03_2.C("g3Config.C",kTRUE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant3 Virtual Monte Carlo 
- Version 3.0 ( 24 February 2020 )
+ Version 3.9 ( 3 December 2021 )
  WWW : https://vmc-project.github.io/
 =============================================================
 
@@ -475,13 +477,13 @@ Step#     X(cm)    Y(cm)    Z(cm)  KinE(MeV)   dE(MeV) Step(cm) TrackL(cm) Volum
    Gap:      total energy (MeV):   3.968       total track length (cm):    2.241
 --- Finish Run MC 
 
- MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr    69495815     4246C07 HEX
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   149662039     8EBA957 HEX
 
  MZSTOR.  Initialize Store  0  in /GCBANK/
-          with Store/Table at absolute adrs    64085741    69495815
-                                        HEX     3D1DEED     4246C07
-                                        HEX    FFAD712A           0
-                              relative adrs    -5410518           0
+          with Store/Table at absolute adrs   144258341   149662039
+                                        HEX     8993525     8EBA957
+                                        HEX    FFAD8A12           0
+                              relative adrs    -5404142           0
           with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
           This store has a fence of   16 words.
 
@@ -506,13 +508,14 @@ Step#     X(cm)    Y(cm)    Z(cm)  KinE(MeV)   dE(MeV) Step(cm) TrackL(cm) Volum
 
  Cross section calculation concluded successfully
  **** GTRIGI: IEVENT=      1 IDEVT=      1 Random Seeds =       4357           0
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g3a.C...
@@ -526,12 +529,12 @@ Processing test_E03_3.C("g3Config.C",kTRUE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant3 Virtual Monte Carlo 
- Version 3.0 ( 24 February 2020 )
+ Version 3.9 ( 3 December 2021 )
  WWW : https://vmc-project.github.io/
 =============================================================
 
@@ -620,13 +623,13 @@ Step#     X(cm)    Y(cm)    Z(cm)  KinE(MeV)   dE(MeV) Step(cm) TrackL(cm) Volum
    Gap:      total energy (MeV):   0.000       total track length (cm):    0.000
 --- Finish Run MC 
 
- MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr    92388359     581BC07 HEX
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   124636503     76DCD57 HEX
 
  MZSTOR.  Initialize Store  0  in /GCBANK/
-          with Store/Table at absolute adrs    86978285    92388359
-                                        HEX     52F2EED     581BC07
-                                        HEX    FFAD712A           0
-                              relative adrs    -5410518           0
+          with Store/Table at absolute adrs   119232805   124636503
+                                        HEX     71B5925     76DCD57
+                                        HEX    FFAD8A12           0
+                              relative adrs    -5404142           0
           with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
           This store has a fence of   16 words.
 
@@ -651,13 +654,14 @@ Step#     X(cm)    Y(cm)    Z(cm)  KinE(MeV)   dE(MeV) Step(cm) TrackL(cm) Volum
 
  Cross section calculation concluded successfully
  **** GTRIGI: IEVENT=      1 IDEVT=      1 Random Seeds =       4357           0
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g3a.C...
@@ -670,12 +674,12 @@ Processing test_E03_4.C("g3Config.C",kTRUE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant3 Virtual Monte Carlo 
- Version 3.0 ( 24 February 2020 )
+ Version 3.9 ( 3 December 2021 )
  WWW : https://vmc-project.github.io/
 =============================================================
 
@@ -687,35 +691,35 @@ Geant3 has been created.
 
 ---> Begin of event: 1
    Primary track ID = 4
+      Current track pi0  is a decay product of Parent ID = 4
+      Current track pi0  is a decay product of Parent ID = 4
 
-      Current track pi0  is a decay product of Parent ID = 4
-      Current track pi0  is a decay product of Parent ID = 4
    Primary track ID = 3
+      Current track pi0  is a decay product of Parent ID = 3
+      Current track pi0  is a decay product of Parent ID = 3
 
-      Current track pi0  is a decay product of Parent ID = 3
-      Current track pi0  is a decay product of Parent ID = 3
    Primary track ID = 2
+      Current track pi0  is a decay product of Parent ID = 2
+      Current track pi0  is a decay product of Parent ID = 2
 
-      Current track pi0  is a decay product of Parent ID = 2
-      Current track pi0  is a decay product of Parent ID = 2
    Primary track ID = 1
+      Current track pi0  is a decay product of Parent ID = 1
+      Current track pi0  is a decay product of Parent ID = 1
 
-      Current track pi0  is a decay product of Parent ID = 1
-      Current track pi0  is a decay product of Parent ID = 1
    Primary track ID = 0
-
       Current track pi0  is a decay product of Parent ID = 0
       Current track pi0  is a decay product of Parent ID = 0
-   Absorber: total energy (MeV): 1590.61       total track length (cm):  76.8102
-   Gap:      total energy (MeV): 56.8953       total track length (cm):  28.4161
 
- MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr    84923399     50FD407 HEX
+   Absorber: total energy (MeV): 1534.65       total track length (cm):     73.1
+   Gap:      total energy (MeV): 59.6649       total track length (cm):  29.8284
+
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   110558551     696FD57 HEX
 
  MZSTOR.  Initialize Store  0  in /GCBANK/
-          with Store/Table at absolute adrs    79513325    84923399
-                                        HEX     4BD46ED     50FD407
-                                        HEX    FFAD712A           0
-                              relative adrs    -5410518           0
+          with Store/Table at absolute adrs   105154853   110558551
+                                        HEX     6448925     696FD57
+                                        HEX    FFAD8A12           0
+                              relative adrs    -5404142           0
           with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
           This store has a fence of   16 words.
 
@@ -740,13 +744,14 @@ Geant3 has been created.
 
  Cross section calculation concluded successfully
  **** GTRIGI: IEVENT=      1 IDEVT=      1 Random Seeds =       4357           0
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g3a.C...
@@ -760,12 +765,12 @@ Processing test_E03_5.C("g3Config.C",kTRUE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant3 Virtual Monte Carlo 
- Version 3.0 ( 24 February 2020 )
+ Version 3.9 ( 3 December 2021 )
  WWW : https://vmc-project.github.io/
 =============================================================
 
@@ -1127,13 +1132,13 @@ Step#     X(cm)    Y(cm)    Z(cm)  KinE(MeV)   dE(MeV) Step(cm) TrackL(cm) Volum
    Gap:      total energy (MeV):   2.957       total track length (cm):    1.496
 --- Finish Run MC 
 
- MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   120887303     7349807 HEX
+ MZSTOR.  ZEBRA table base TAB(0) in /MZCC/ at adr   119316823     71CA157 HEX
 
  MZSTOR.  Initialize Store  0  in /GCBANK/
-          with Store/Table at absolute adrs   115477229   120887303
-                                        HEX     6E20AED     7349807
-                                        HEX    FFAD712A           0
-                              relative adrs    -5410518           0
+          with Store/Table at absolute adrs   113913125   119316823
+                                        HEX     6CA2D25     71CA157
+                                        HEX    FFAD8A12           0
+                              relative adrs    -5404142           0
           with     1 Str. in     2 Links in   5300 Low words in 4999970 words.
           This store has a fence of   16 words.
 

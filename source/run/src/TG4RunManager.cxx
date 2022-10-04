@@ -36,18 +36,18 @@
 #include "TG4TrackingAction.h"
 #include "TG4WorkerInitialization.h"
 
+#include <G4Threading.hh>
+#include <G4Types.hh>
 #ifdef G4MULTITHREADED
 #include <G4MTRunManager.hh>
 #else
 #include <G4RunManager.hh>
 #endif
 
+#include <G4UIExecutive.hh>
 #include <G4UImanager.hh>
 #include <G4UIsession.hh>
 #include <Randomize.hh>
-#ifdef G4UI_USE
-#include <G4UIExecutive.hh>
-#endif
 
 #ifdef USE_G4ROOT
 #include <TG4RootNavMgr.h>
@@ -157,9 +157,7 @@ TG4RunManager::~TG4RunManager()
   if (isMaster) {
     delete fRunConfiguration;
     delete fRegionsManager;
-#ifdef G4UI_USE
     delete fGeantUISession;
-#endif
     delete fRunManager;
     if (fRootUIOwner) delete fRootUISession;
     fgMasterInstance = 0;
@@ -195,6 +193,14 @@ void TG4RunManager::ConfigureRunManager()
   TG4RootNavMgr* rootNavMgr = 0;
   if (userGeometry == "VMCtoRoot" || userGeometry == "Root") {
     if (!TMCManager::Instance()) {
+
+#if ROOT_VERSION_CODE >= ROOT_VERSION(6, 22, 8)
+      // Set Root default units to TGeo
+      TGeoManager::LockDefaultUnits(false);
+      TGeoManager::SetDefaultUnits(TGeoManager::kRootUnits);
+      TGeoManager::LockDefaultUnits(true);
+#endif
+
       // Construct geometry via VMC application
       if (TG4GeometryManager::Instance()->VerboseLevel() > 0)
         G4cout << "Running TVirtualMCApplication::ConstructGeometry"
@@ -588,10 +594,8 @@ void TG4RunManager::CreateGeantUI()
 
   if (fGeantUISession) return;
 
-#ifdef G4UI_USE
   // create session if it does not exist
   fGeantUISession = new G4UIExecutive(fARGC, fARGV);
-#endif
 }
 
 //_____________________________________________________________________________
@@ -602,12 +606,10 @@ void TG4RunManager::StartGeantUI()
   if (!fGeantUISession) CreateGeantUI();
 
   if (fGeantUISession) {
-#ifdef G4UI_USE
     // interactive session
     G4cout << "Welcome (back) in Geant4" << G4endl;
     fGeantUISession->GetSession()->SessionStart();
     G4cout << "Welcome (back) in Root" << G4endl;
-#endif
   }
   else {
     G4cout << "Geant4 UI not available." << G4endl;

@@ -75,6 +75,7 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
 
   controlMap->Add("Decay", kDCAY);
   controlMap->Add("RadioactiveDecay", kDCAY);
+  controlMap->Add("RadioactiveDecayBase", kDCAY);
 
   controlMap->Add("compt", kCOMP);
   controlMap->Add("phot", kPHOT);
@@ -95,6 +96,7 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
 
   controlMap->Add("nCapture", kHADR);
   controlMap->Add("HadronCapture", kHADR);
+  controlMap->Add("hFritiofWithBinaryCascadeCaptureAtRest", kHADR);
   controlMap->Add("nFission", kHADR);
   controlMap->Add("HadronFission", kHADR);
 
@@ -119,6 +121,20 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
   controlMap->Add("CHIPSElasticScattering", kHADR);
 
   controlMap->Add("inelastic", kHADR);
+  controlMap->Add("B+Inelastic", kHADR);
+  controlMap->Add("B-Inelastic", kHADR);
+  controlMap->Add("B0Inelastic", kHADR);
+  controlMap->Add("anti_B0Inelastic", kHADR);
+  controlMap->Add("Bc+Inelastic", kHADR);
+  controlMap->Add("Bc-Inelastic", kHADR);
+  controlMap->Add("Bs0Inelastic", kHADR);
+  controlMap->Add("anti_Bs0Inelastic", kHADR);
+  controlMap->Add("D+Inelastic", kHADR);
+  controlMap->Add("D-Inelastic", kHADR);
+  controlMap->Add("D0Inelastic", kHADR);
+  controlMap->Add("anti_D0Inelastic", kHADR);
+  controlMap->Add("Ds+Inelastic", kHADR);
+  controlMap->Add("Ds-Inelastic", kHADR);
   controlMap->Add("PionMinusInelastic", kHADR);
   controlMap->Add("pi-Inelastic", kHADR);
   controlMap->Add("PionPlusInelastic", kHADR);
@@ -133,7 +149,11 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
   controlMap->Add("kaon0SInelastic", kHADR);
   controlMap->Add("LambdaInelastic", kHADR);
   controlMap->Add("lambdaInelastic", kHADR);
+  controlMap->Add("lambda_bInelastic", kHADR);
+  controlMap->Add("lambda_c+Inelastic", kHADR);
   controlMap->Add("anti-lambdaInelastic", kHADR);
+  controlMap->Add("anti_lambda_bInelastic", kHADR);
+  controlMap->Add("anti_lambda_c+Inelastic", kHADR);
   controlMap->Add("ProtonInelastic", kHADR);
   controlMap->Add("protonInelastic", kHADR);
   controlMap->Add("AntiProtonInelastic", kHADR);
@@ -154,18 +174,31 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
   controlMap->Add("AntiSigmaPlusInelastic", kHADR);
   controlMap->Add("anti_sigma+Inelastic", kHADR);
   controlMap->Add("sigma0Inelastic", kHADR);
+  controlMap->Add("anti_sigma0Inelastic", kHADR);
   controlMap->Add("XiMinusInelastic", kHADR);
   controlMap->Add("xi-Inelastic", kHADR);
+  controlMap->Add("xi_b-Inelastic", kHADR);
+  controlMap->Add("xi_b0Inelastic", kHADR);
+  controlMap->Add("xi_c+Inelastic", kHADR);
+  controlMap->Add("xi_c0Inelastic", kHADR);
   controlMap->Add("AntiXiMinusInelastic", kHADR);
   controlMap->Add("anti_xi-Inelastic", kHADR);
+  controlMap->Add("anti_xi_b-Inelastic", kHADR);
+  controlMap->Add("anti_xi_b0Inelastic", kHADR);
+  controlMap->Add("anti_xi_c+Inelastic", kHADR);
+  controlMap->Add("anti_xi_c0Inelastic", kHADR);
   controlMap->Add("XiZeroInelastic", kHADR);
   controlMap->Add("xi0Inelastic", kHADR);
   controlMap->Add("AntiXiZeroInelastic", kHADR);
   controlMap->Add("anti_xi0Inelastic", kHADR);
   controlMap->Add("OmegaMinusInelastic", kHADR);
   controlMap->Add("omega-Inelastic", kHADR);
+  controlMap->Add("omega_b-Inelastic", kHADR);
+  controlMap->Add("omega_c0Inelastic", kHADR);
   controlMap->Add("AntiOmegaMinusInelastic", kHADR);
   controlMap->Add("anti_omega-Inelastic", kHADR);
+  controlMap->Add("anti_omega_b-Inelastic", kHADR);
+  controlMap->Add("anti_omega_c0Inelastic", kHADR);
   controlMap->Add("DeuteronInelastic", kHADR);
   controlMap->Add("dInelastic", kHADR);
   controlMap->Add("AntiDeuteronInelastic", kHADR);
@@ -189,17 +222,17 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
   controlMap->Add("hInelastic", kHADR);
   controlMap->Add("CHIPS_Inelastic", kHADR);
 
-  controlMap->Add("nKiller", kHADR);
+  controlMap->Add("nKiller", kNoG3Controls);
 
   controlMap->Add("muNucl", kMUNU);
   controlMap->Add("muonNuclear", kMUNU);
-  controlMap->Add("muMinusCaptureAtRest", kMUNU);
-  controlMap->Add("PositronNuclear", kNoG3Controls);
-  controlMap->Add("positronNuclear", kNoG3Controls);
-  controlMap->Add("ElectroNuclear", kNoG3Controls);
-  controlMap->Add("electronNuclear", kNoG3Controls);
-  controlMap->Add("photoNuclear", kNoG3Controls);
-  controlMap->Add("photonNuclear", kNoG3Controls);
+  controlMap->Add("muMinusCaptureAtRest", kHADR);
+  controlMap->Add("PositronNuclear", kHADR);
+  controlMap->Add("positronNuclear", kHADR);
+  controlMap->Add("ElectroNuclear", kHADR);
+  controlMap->Add("electronNuclear", kHADR);
+  controlMap->Add("photoNuclear", kHADR);
+  controlMap->Add("photonNuclear", kHADR);
 
   controlMap->Add("Cerenkov", kCKOV);
   controlMap->Add("Scintillation", kNoG3Controls);
@@ -209,6 +242,7 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
   controlMap->Add("OpBoundary", kLABS);
   controlMap->Add("OpMieHG", kNoG3Controls);
   controlMap->Add("OpWLS", kNoG3Controls);
+  controlMap->Add("OpWLS2", kNoG3Controls);
   controlMap->Add("GammaXTRadiator", kNoG3Controls);
   controlMap->Add("StrawXTRadiator", kNoG3Controls);
   controlMap->Add("RegularXTRadiator", kNoG3Controls);
@@ -216,7 +250,9 @@ void TG4ProcessControlMapPhysics::FillMap(G4bool isBiasing)
   controlMap->Add("SynRad", kSYNC);
   controlMap->Add("CHIPS_SynchrotronRadiation", kSYNC);
 
+  controlMap->Add("biasLimiter", kNoG3Controls);
   controlMap->Add("biasWrapper(0)", kNoG3Controls);
+  controlMap->Add("GammaGeneralProc", kNoG3Controls);
 }
 
 //
@@ -247,7 +283,7 @@ void TG4ProcessControlMapPhysics::ConstructProcess()
     G4ProcessVector* processVector =
       aParticleIterator->value()->GetProcessManager()->GetProcessList();
 
-    for (G4int i = 0; i < processVector->length(); i++) {
+    for (size_t i = 0; i < processVector->length(); i++) {
 
       G4String processName = (*processVector)[i]->GetProcessName();
 
@@ -259,12 +295,15 @@ void TG4ProcessControlMapPhysics::ConstructProcess()
           processName != "electronNuclear" && processName != "photoNuclear" &&
           processName != "photonNuclear" && processName != "Scintillation" &&
           processName != "OpMieHG" && processName != "OpWLS" &&
-          processName != "MinEkineCuts" && processName != "G4MinEkineCuts" &&
-          processName != "MaxTimeCuts" && processName != "stackPopper" &&
-          processName != "StepLimiter" && processName != "GammaXTRadiator" &&
+          processName != "OpWLS2" && processName != "MinEkineCuts" &&
+          processName != "G4MinEkineCuts" && processName != "MaxTimeCuts" &&
+          processName != "stackPopper" && processName != "StepLimiter" &&
+          processName != "GammaXTRadiator" &&
           processName != "StrawXTRadiator" &&
           processName != "RegularXTRadiator" &&
-          processName != "G4MaxTimeCuts" && processName != "biasWrapper(0)") {
+          processName != "G4MaxTimeCuts" && processName != "biasWrapper(0)" &&
+          processName != "GammaGeneralProc" && processName != "biasLimiter" &&
+          processName != "nKiller") {
 
         G4String text = "Unknown process control for ";
         text += processName;

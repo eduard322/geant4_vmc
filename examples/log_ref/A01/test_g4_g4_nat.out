@@ -1,10 +1,11 @@
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g4.C...
@@ -19,18 +20,18 @@ Processing test_A01_1.C("g4Config1.C",kFALSE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant4 Virtual Monte Carlo 
- Version 5.0 ( 24 February 2020 )
+ Version 5.4 ( 3 December 2021 )
  WWW : http://root.cern.ch/drupal/content/geant4-vmc
 =============================================================
 
 
 **************************************************************
- Geant4 version Name: geant4-10-05-patch-01    (17-April-2019)
+ Geant4 version Name: geant4-10-07-patch-03    (19-November-2021)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -40,7 +41,7 @@ Processing test_A01_1.C("g4Config1.C",kFALSE)...
 
 Adding HadronPhysicsList FTFP_BERT
 G4PhysListFactory::GetReferencePhysList <FTFP_BERT>  EMoption= 0
-<<< Geant4 Physics List simulation engine: FTFP_BERT 2.0
+<<< Geant4 Physics List simulation engine: FTFP_BERT
 
 <<< Reference Physics List FTFP_BERT is built
 
@@ -127,71 +128,71 @@ The materials defined are :
 
 
 
-Checking overlaps for volume magneticPhysical ... OK! 
-Checking overlaps for volume firstArmPhysical ... OK! 
-Checking overlaps for volume fSecondArmPhys ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume wirePlane1Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume wirePlane2Physical ... OK! 
-Checking overlaps for volume EMcalorimeterPhysical ... OK! 
-Checking overlaps for volume HadCalorimeterPhysical ... OK! 
-Checking overlaps for volume HadCalScintiPhysical ... OK! 
+Checking overlaps for volume magneticPhysical (G4Tubs) ... OK! 
+Checking overlaps for volume firstArmPhysical (G4Box) ... OK! 
+Checking overlaps for volume fSecondArmPhys (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume wirePlane1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume wirePlane2Physical (G4Box) ... OK! 
+Checking overlaps for volume EMcalorimeterPhysical (G4Box) ... OK! 
+Checking overlaps for volume HadCalorimeterPhysical (G4Box) ... OK! 
+Checking overlaps for volume HadCalScintiPhysical (G4Box) ... OK! 
 Global field created with stepper DormandPrince745
 
- FTFP_BERT : new threshold between BERT and FTFP is over the interval 
- for pions :   3 to 12 GeV
- for kaons :   3 to 12 GeV
- for proton :  3 to 12 GeV
- for neutron : 3 to 12 GeV
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
 
 ### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
 ### Hadron physics constructed. 
@@ -199,6 +200,7 @@ Global field created with stepper DormandPrince745
 ### Step limiter physics constructed.
 ### User particles physics constructed. 
 ### Processes mapped to VMC codes ok.
+TG4ComposedPhysicsList::ConstructProcess done
 Available UI session types: [ GAG, tcsh, csh ]
 
 **********************************************
@@ -225,8 +227,7 @@ compt:  for gamma SubType=13 BuildTable=1
 conv:  for gamma SubType=14 BuildTable=1
       Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        BetheHeitler : Emin=    0 eV  Emax=   80 GeV  ModifiedTsai
-     BetheHeitlerLPM : Emin=   80 GeV Emax=  100 TeV  ModifiedTsai
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
 
 Rayl:  for gamma SubType=11 BuildTable=1
       Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
@@ -235,10 +236,11 @@ Rayl:  for gamma SubType=11 BuildTable=1
    LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
 
 msc:  for e-  SubType= 10
-      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
         WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
 
 eIoni:  for e-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -262,10 +264,11 @@ CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
 
 msc:  for e+  SubType= 10
-      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
         WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
 
 eIoni:  for e+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -293,9 +296,9 @@ CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
 
 msc:  for proton  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for proton  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -309,14 +312,14 @@ hBrems:  for proton  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for proton  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -325,9 +328,9 @@ CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for GenericIon  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 ionIoni:  for GenericIon  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -339,9 +342,9 @@ ionIoni:  for GenericIon  SubType=2
           BetheBloch : Emin=    2 MeV Emax=  100 TeV
 
 msc:  for alpha  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 ionIoni:  for alpha  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -352,9 +355,9 @@ ionIoni:  for alpha  SubType=2
           BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
 
 msc:  for anti_proton  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for anti_proton  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -368,14 +371,14 @@ hBrems:  for anti_proton  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for anti_proton  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -384,9 +387,9 @@ CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for kaon+  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for kaon+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -400,14 +403,14 @@ hBrems:  for kaon+  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for kaon+  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -416,9 +419,9 @@ CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for kaon-  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for kaon-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -432,14 +435,14 @@ hBrems:  for kaon-  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for kaon-  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of kaon+
@@ -448,9 +451,9 @@ CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for mu+  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 muIoni:  for mu+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -465,14 +468,14 @@ muBrems:  for mu+  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-              MuBrem : Emin=    0 eV  Emax=  100 TeV
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 muPairProd:  for mu+  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 21x1001; from 1 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd : Emin=    0 eV  Emax=  100 TeV
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -481,9 +484,9 @@ CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for mu-  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 muIoni:  for mu-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -498,14 +501,14 @@ muBrems:  for mu-  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-              MuBrem : Emin=    0 eV  Emax=  100 TeV
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 muPairProd:  for mu-  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 21x1001; from 1 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd : Emin=    0 eV  Emax=  100 TeV
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of mu+
@@ -514,9 +517,9 @@ CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for pi+  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for pi+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -530,14 +533,14 @@ hBrems:  for pi+  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for pi+  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -546,9 +549,9 @@ CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for pi-  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for pi-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -562,14 +565,14 @@ hBrems:  for pi-  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for pi-  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of pi+
@@ -589,7 +592,7 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: neutronInelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
      Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
 
   Process: nCapture
@@ -599,41 +602,58 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: nKiller
 
 ---------------------------------------------------
+                           Hadronic Processes for B-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for D-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
                            Hadronic Processes for GenericIon
 
   Process: ionInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for He3
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: He3Inelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for alpha
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: alphaInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for anti_He3
@@ -641,13 +661,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_He3Inelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -657,13 +675,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_alphaInelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -673,13 +689,24 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_deuteronInelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
 
   Process: hFritiofCaptureAtRest
 
@@ -687,13 +714,15 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
                            Hadronic Processes for anti_neutron
 
   Process: hadElastic
-        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_neutronInelastic
         Model:                      FTFP: 0 eV  ---> 100 TeV
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
 
 ---------------------------------------------------
                            Hadronic Processes for anti_proton
@@ -701,13 +730,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
         Model:              AntiAElastic: 100 MeV ---> 100 TeV
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_protonInelastic
         Model:                      FTFP: 0 eV  ---> 100 TeV
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -717,13 +744,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_tritonInelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -732,19 +757,17 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: dInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for e+
 
-  Process: positronNuclear
+  Process: electronNuclear
         Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
      Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
 
@@ -759,7 +782,8 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
                            Hadronic Processes for gamma
 
   Process: photonNuclear
-        Model:            BertiniCascade: 0 eV  ---> 3.5 GeV
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
         Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
      Cr_sctns:            PhotoNuclearXS: 0 eV  ---> 100 TeV
 
@@ -769,14 +793,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100 TeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
 
   Process: kaon+Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns:  ChipsKaonPlusInelasticXS: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
 
 ---------------------------------------------------
                            Hadronic Processes for kaon-
@@ -784,14 +805,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100 TeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
 
   Process: kaon-Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns: ChipsKaonMinusInelasticXS: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
 
   Process: hBertiniCaptureAtRest
 
@@ -800,13 +818,12 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
 
   Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
         Model:            BertiniCascade: 0 eV  ---> 6 GeV
-        Model:                      FTFP: 2 GeV ---> 100 TeV
-     Cr_sctns:   ChipsHyperonInelasticXS: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
 
 ---------------------------------------------------
                            Hadronic Processes for mu+
@@ -828,27 +845,25 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
                            Hadronic Processes for pi+
 
   Process: hadElastic
-        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
-        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: pi+Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
-     Cr_sctns: Barashenkov-Glauber-Gribov: 0 eV  ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
 ---------------------------------------------------
                            Hadronic Processes for pi-
 
   Process: hadElastic
-        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
-        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: pi-Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
-     Cr_sctns: Barashenkov-Glauber-Gribov: 0 eV  ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: hBertiniCaptureAtRest
 
@@ -857,30 +872,66 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: hadElastic
         Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: protonInelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for sigma-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
 
 ---------------------------------------------------
                            Hadronic Processes for triton
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: tInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ================================================================
+=======================================================================
+======       Pre-compound/De-excitation Physics Parameters     ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Pre-compound model active                           1
+Pre-compound excitation low energy (MeV)            0.1
+Pre-compound excitation high energy (MeV)           30
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy (keV)                         0.01
+Min energy per nucleon for multifragmentation (MeV) 2e+05
+Limit excitation energy for Fermi BreakUp (MeV)     20
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres (ns)             1
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   0
+Electron internal conversion ID                     2
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
 
-========= Table of registered couples ==============================
+========= Table of registered couples ============================
 
 Index : 0     used in the geometry : Yes
  Material : G4_AIR
@@ -917,59 +968,60 @@ Index : 4     used in the geometry : Yes
  Region(s) which use this couple : 
     DefaultRegionForTheWorld
 
-====================================================================
+==================================================================
 
 ### Run 0 start.
 
 >>> Event 0 >>> Simulation truth : e+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 3 hits.
+Hodoscope1 has 1 hits.
 Hodoscope2 has 1 hits.
-Chamber1 has 528 hits.
-Chamber2 has 497 hits.
-EmCalorimeter has 48 hits. Total Edep is 83120.1 (MeV)
-HadCalorimeter has 5 hits. Total Edep is 7.04127 (MeV)
+Chamber1 has 534 hits.
+Chamber2 has 493 hits.
+EmCalorimeter has 51 hits. Total Edep is 89031 (MeV)
+HadCalorimeter has 4 hits. Total Edep is 3.7392 (MeV)
 
 >>> Event 1 >>> Simulation truth : mu+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 2 hits.
-Hodoscope2 has 1 hits.
-Chamber1 has 541 hits.
-Chamber2 has 525 hits.
-EmCalorimeter has 33 hits. Total Edep is 18217.4 (MeV)
-HadCalorimeter has 16 hits. Total Edep is 2588.06 (MeV)
-
->>> Event 2 >>> Simulation truth : pi+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 5 hits.
-Hodoscope2 has 1 hits.
-Chamber1 has 512 hits.
-Chamber2 has 476 hits.
-EmCalorimeter has 75 hits. Total Edep is 27600.7 (MeV)
-HadCalorimeter has 19 hits. Total Edep is 1801.71 (MeV)
-
->>> Event 3 >>> Simulation truth : K+ (-6.91145, 0, 989.976) MeV
 Hodoscope1 has 4 hits.
 Hodoscope2 has 1 hits.
-Chamber1 has 448 hits.
-Chamber2 has 228 hits.
-EmCalorimeter has 53 hits. Total Edep is 11334.1 (MeV)
-HadCalorimeter has 12 hits. Total Edep is 537.543 (MeV)
+Chamber1 has 537 hits.
+Chamber2 has 507 hits.
+EmCalorimeter has 27 hits. Total Edep is 17680.5 (MeV)
+HadCalorimeter has 17 hits. Total Edep is 2568.52 (MeV)
 
->>> Event 4 >>> Simulation truth : proton (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 5 hits.
+>>> Event 2 >>> Simulation truth : pi+ (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 4 hits.
 Hodoscope2 has 1 hits.
 Chamber1 has 515 hits.
-Chamber2 has 506 hits.
-EmCalorimeter has 55 hits. Total Edep is 27628.3 (MeV)
-HadCalorimeter has 13 hits. Total Edep is 132.458 (MeV)
-Time of this run:   User=5.970000s Real=6.071765s Sys=0.060000s
+Chamber2 has 484 hits.
+EmCalorimeter has 58 hits. Total Edep is 31380.9 (MeV)
+HadCalorimeter has 16 hits. Total Edep is 1495.04 (MeV)
+
+>>> Event 3 >>> Simulation truth : K+ (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 8 hits.
+Hodoscope2 has 1 hits.
+Chamber1 has 429 hits.
+Chamber2 has 146 hits.
+EmCalorimeter has 37 hits. Total Edep is 4034.56 (MeV)
+HadCalorimeter has 16 hits. Total Edep is 345.568 (MeV)
+
+>>> Event 4 >>> Simulation truth : proton (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 2 hits.
+Hodoscope2 has 1 hits.
+Chamber1 has 536 hits.
+Chamber2 has 517 hits.
+EmCalorimeter has 55 hits. Total Edep is 27699.5 (MeV)
+HadCalorimeter has 16 hits. Total Edep is 103.35 (MeV)
+Time of this run:   User=4.990000s Real=5.088735s Sys=0.070000s
 Number of events processed: 5
-Real time 0:00:06, CP time 6.870
-   ------------------------------------------------------------
-  | Welcome to ROOT 6.18/04                  https://root.cern |
-  |                               (c) 1995-2019, The ROOT Team |
-  | Built for macosx64 on Dec 20 2019, 12:31:00                |
-  | From tags/v6-18-04@v6-18-04                                |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q' |
-   ------------------------------------------------------------
+Real time 0:00:07, CP time 7.380
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.24/06                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Dec 03 2021, 19:13:00                      |
+  | From tags/v6-24-06@v6-24-06                                      |
+  | With Apple clang version 12.0.5 (clang-1205.0.22.11)             |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
 
 
 Processing load_g4.C...
@@ -984,18 +1036,18 @@ Processing test_A01_2.C("g4Config1.C",kFALSE)...
 
 =============================================================
  Virtual Monte Carlo Library
- Version 1.0 ( 24 February 2020 )
+ Version 1.1 ( 3 December 2021 )
 =============================================================
 
 =============================================================
  Geant4 Virtual Monte Carlo 
- Version 5.0 ( 24 February 2020 )
+ Version 5.4 ( 3 December 2021 )
  WWW : http://root.cern.ch/drupal/content/geant4-vmc
 =============================================================
 
 
 **************************************************************
- Geant4 version Name: geant4-10-05-patch-01    (17-April-2019)
+ Geant4 version Name: geant4-10-07-patch-03    (19-November-2021)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -1005,7 +1057,7 @@ Processing test_A01_2.C("g4Config1.C",kFALSE)...
 
 Adding HadronPhysicsList FTFP_BERT
 G4PhysListFactory::GetReferencePhysList <FTFP_BERT>  EMoption= 0
-<<< Geant4 Physics List simulation engine: FTFP_BERT 2.0
+<<< Geant4 Physics List simulation engine: FTFP_BERT
 
 <<< Reference Physics List FTFP_BERT is built
 
@@ -1092,70 +1144,70 @@ The materials defined are :
 
 
 
-Checking overlaps for volume magneticPhysical ... OK! 
-Checking overlaps for volume firstArmPhysical ... OK! 
-Checking overlaps for volume fSecondArmPhys ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume hodoscope1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume chamber1Physical ... OK! 
-Checking overlaps for volume wirePlane1Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume hodoscope2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume chamber2Physical ... OK! 
-Checking overlaps for volume wirePlane2Physical ... OK! 
-Checking overlaps for volume EMcalorimeterPhysical ... OK! 
-Checking overlaps for volume HadCalorimeterPhysical ... OK! 
-Checking overlaps for volume HadCalScintiPhysical ... OK! 
+Checking overlaps for volume magneticPhysical (G4Tubs) ... OK! 
+Checking overlaps for volume firstArmPhysical (G4Box) ... OK! 
+Checking overlaps for volume fSecondArmPhys (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume wirePlane1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume wirePlane2Physical (G4Box) ... OK! 
+Checking overlaps for volume EMcalorimeterPhysical (G4Box) ... OK! 
+Checking overlaps for volume HadCalorimeterPhysical (G4Box) ... OK! 
+Checking overlaps for volume HadCalScintiPhysical (G4Box) ... OK! 
 
- FTFP_BERT : new threshold between BERT and FTFP is over the interval 
- for pions :   3 to 12 GeV
- for kaons :   3 to 12 GeV
- for proton :  3 to 12 GeV
- for neutron : 3 to 12 GeV
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
 
 ### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
 ### Hadron physics constructed. 
@@ -1163,6 +1215,7 @@ Checking overlaps for volume HadCalScintiPhysical ... OK!
 ### Step limiter physics constructed.
 ### User particles physics constructed. 
 ### Processes mapped to VMC codes ok.
+TG4ComposedPhysicsList::ConstructProcess done
 Available UI session types: [ GAG, tcsh, csh ]
 
 **********************************************
@@ -1189,8 +1242,7 @@ compt:  for gamma SubType=13 BuildTable=1
 conv:  for gamma SubType=14 BuildTable=1
       Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        BetheHeitler : Emin=    0 eV  Emax=   80 GeV  ModifiedTsai
-     BetheHeitlerLPM : Emin=   80 GeV Emax=  100 TeV  ModifiedTsai
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
 
 Rayl:  for gamma SubType=11 BuildTable=1
       Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
@@ -1199,10 +1251,11 @@ Rayl:  for gamma SubType=11 BuildTable=1
    LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
 
 msc:  for e-  SubType= 10
-      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
         WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
 
 eIoni:  for e-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1226,10 +1279,11 @@ CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
 
 msc:  for e+  SubType= 10
-      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
         WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
 
 eIoni:  for e+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1257,9 +1311,9 @@ CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
 
 msc:  for proton  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for proton  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1273,14 +1327,14 @@ hBrems:  for proton  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for proton  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -1289,9 +1343,9 @@ CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for GenericIon  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 ionIoni:  for GenericIon  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1303,9 +1357,9 @@ ionIoni:  for GenericIon  SubType=2
           BetheBloch : Emin=    2 MeV Emax=  100 TeV
 
 msc:  for alpha  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
             UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 ionIoni:  for alpha  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1316,9 +1370,9 @@ ionIoni:  for alpha  SubType=2
           BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
 
 msc:  for anti_proton  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for anti_proton  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1332,14 +1386,14 @@ hBrems:  for anti_proton  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for anti_proton  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -1348,9 +1402,9 @@ CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for kaon+  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for kaon+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1364,14 +1418,14 @@ hBrems:  for kaon+  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for kaon+  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -1380,9 +1434,9 @@ CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for kaon-  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for kaon-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1396,14 +1450,14 @@ hBrems:  for kaon-  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for kaon-  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of kaon+
@@ -1412,9 +1466,9 @@ CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for mu+  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 muIoni:  for mu+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1429,14 +1483,14 @@ muBrems:  for mu+  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-              MuBrem : Emin=    0 eV  Emax=  100 TeV
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 muPairProd:  for mu+  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 21x1001; from 1 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd : Emin=    0 eV  Emax=  100 TeV
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -1445,9 +1499,9 @@ CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for mu-  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 muIoni:  for mu-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1462,14 +1516,14 @@ muBrems:  for mu-  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-              MuBrem : Emin=    0 eV  Emax=  100 TeV
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 muPairProd:  for mu-  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 21x1001; from 1 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd : Emin=    0 eV  Emax=  100 TeV
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of mu+
@@ -1478,9 +1532,9 @@ CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for pi+  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for pi+  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1494,14 +1548,14 @@ hBrems:  for pi+  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for pi+  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
       Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
@@ -1510,9 +1564,9 @@ CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
   eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
 
 msc:  for pi-  SubType= 10
-      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
         WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
 
 hIoni:  for pi-  SubType=2
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
@@ -1526,14 +1580,14 @@ hBrems:  for pi-  SubType=3
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem : Emin=    0 eV  Emax=  100 TeV
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 hPairProd:  for pi-  SubType=4
       dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
       Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
       Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd : Emin=    0 eV  Emax=  100 TeV
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
 
 CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of pi+
@@ -1553,7 +1607,7 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: neutronInelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
      Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
 
   Process: nCapture
@@ -1563,41 +1617,58 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: nKiller
 
 ---------------------------------------------------
+                           Hadronic Processes for B-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for D-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
                            Hadronic Processes for GenericIon
 
   Process: ionInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for He3
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: He3Inelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for alpha
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: alphaInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for anti_He3
@@ -1605,13 +1676,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_He3Inelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -1621,13 +1690,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_alphaInelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -1637,13 +1704,24 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_deuteronInelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
 
   Process: hFritiofCaptureAtRest
 
@@ -1651,13 +1729,15 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
                            Hadronic Processes for anti_neutron
 
   Process: hadElastic
-        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_neutronInelastic
         Model:                      FTFP: 0 eV  ---> 100 TeV
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
 
 ---------------------------------------------------
                            Hadronic Processes for anti_proton
@@ -1665,13 +1745,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
         Model:              AntiAElastic: 100 MeV ---> 100 TeV
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_protonInelastic
         Model:                      FTFP: 0 eV  ---> 100 TeV
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -1681,13 +1759,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
         Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: anti_tritonInelastic
         Model:                      FTFP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:              AntiAGlauber: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
 
   Process: hFritiofCaptureAtRest
 
@@ -1696,19 +1772,17 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: dInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ---------------------------------------------------
                            Hadronic Processes for e+
 
-  Process: positronNuclear
+  Process: electronNuclear
         Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
      Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
 
@@ -1723,7 +1797,8 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
                            Hadronic Processes for gamma
 
   Process: photonNuclear
-        Model:            BertiniCascade: 0 eV  ---> 3.5 GeV
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
         Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
      Cr_sctns:            PhotoNuclearXS: 0 eV  ---> 100 TeV
 
@@ -1733,14 +1808,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100 TeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
 
   Process: kaon+Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns:  ChipsKaonPlusInelasticXS: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
 
 ---------------------------------------------------
                            Hadronic Processes for kaon-
@@ -1748,14 +1820,11 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100 TeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
 
   Process: kaon-Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
      Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
-     Cr_sctns: ChipsKaonMinusInelasticXS: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
 
   Process: hBertiniCaptureAtRest
 
@@ -1764,13 +1833,12 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
 
   Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
         Model:            BertiniCascade: 0 eV  ---> 6 GeV
-        Model:                      FTFP: 2 GeV ---> 100 TeV
-     Cr_sctns:   ChipsHyperonInelasticXS: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
 
 ---------------------------------------------------
                            Hadronic Processes for mu+
@@ -1792,27 +1860,25 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
                            Hadronic Processes for pi+
 
   Process: hadElastic
-        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
-        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: pi+Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
-     Cr_sctns: Barashenkov-Glauber-Gribov: 0 eV  ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
 ---------------------------------------------------
                            Hadronic Processes for pi-
 
   Process: hadElastic
-        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
-        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: pi-Inelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
-     Cr_sctns: Barashenkov-Glauber-Gribov: 0 eV  ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: hBertiniCaptureAtRest
 
@@ -1821,30 +1887,66 @@ CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
 
   Process: hadElastic
         Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
 
   Process: protonInelastic
         Model:                      FTFP: 3 GeV ---> 100 TeV
-        Model:            BertiniCascade: 0 eV  ---> 12 GeV
-     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for sigma-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
 
 ---------------------------------------------------
                            Hadronic Processes for triton
 
   Process: hadElastic
         Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
   Process: tInelastic
-        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
-        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
-     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 100 TeV
-     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
 
 ================================================================
+=======================================================================
+======       Pre-compound/De-excitation Physics Parameters     ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Pre-compound model active                           1
+Pre-compound excitation low energy (MeV)            0.1
+Pre-compound excitation high energy (MeV)           30
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy (keV)                         0.01
+Min energy per nucleon for multifragmentation (MeV) 2e+05
+Limit excitation energy for Fermi BreakUp (MeV)     20
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres (ns)             1
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   0
+Electron internal conversion ID                     2
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
 
-========= Table of registered couples ==============================
+========= Table of registered couples ============================
 
 Index : 0     used in the geometry : Yes
  Material : G4_AIR
@@ -1881,53 +1983,49 @@ Index : 4     used in the geometry : Yes
  Region(s) which use this couple : 
     DefaultRegionForTheWorld
 
-====================================================================
+==================================================================
 
 ### Run 0 start.
 
 >>> Event 0 >>> Simulation truth : e+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 4 hits.
-Hodoscope2 has 1 hits.
-Chamber1 has 553 hits.
-Chamber2 has 510 hits.
-EmCalorimeter has 45 hits. Total Edep is 87670 (MeV)
-HadCalorimeter has 5 hits. Total Edep is 3.63087 (MeV)
-
->>> Event 1 >>> Simulation truth : mu+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 3 hits.
-Hodoscope2 has 1 hits.
-Chamber1 has 525 hits.
-Chamber2 has 528 hits.
-EmCalorimeter has 28 hits. Total Edep is 18116.3 (MeV)
-HadCalorimeter has 17 hits. Total Edep is 2536.01 (MeV)
-
->>> Event 2 >>> Simulation truth : pi+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 4 hits.
-Hodoscope2 has 1 hits.
-Chamber1 has 526 hits.
-Chamber2 has 487 hits.
-EmCalorimeter has 65 hits. Total Edep is 32496.8 (MeV)
-HadCalorimeter has 19 hits. Total Edep is 1680.46 (MeV)
-
->>> Event 3 >>> Simulation truth : K+ (-6.91145, 0, 989.976) MeV
-Hodoscope1 has 3 hits.
-Hodoscope2 has 1 hits.
-Chamber1 has 483 hits.
-Chamber2 has 152 hits.
-EmCalorimeter has 42 hits. Total Edep is 4355.42 (MeV)
-HadCalorimeter has 16 hits. Total Edep is 291.242 (MeV)
-
->>> Event 4 >>> Simulation truth : proton (-6.91145, 0, 989.976) MeV
 Hodoscope1 has 2 hits.
 Hodoscope2 has 1 hits.
-Chamber1 has 527 hits.
-Chamber2 has 524 hits.
-EmCalorimeter has 43 hits. Total Edep is 29360.7 (MeV)
-HadCalorimeter has 13 hits. Total Edep is 75.2817 (MeV)
-Time of this run:   User=4.550000s Real=4.655366s Sys=0.060000s
+Chamber1 has 546 hits.
+Chamber2 has 503 hits.
+EmCalorimeter has 45 hits. Total Edep is 87669.8 (MeV)
+HadCalorimeter has 5 hits. Total Edep is 7.86437 (MeV)
+
+>>> Event 1 >>> Simulation truth : mu+ (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 2 hits.
+Hodoscope2 has 1 hits.
+Chamber1 has 525 hits.
+Chamber2 has 519 hits.
+EmCalorimeter has 35 hits. Total Edep is 18236.3 (MeV)
+HadCalorimeter has 19 hits. Total Edep is 2614.55 (MeV)
+
+>>> Event 2 >>> Simulation truth : pi+ (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 2 hits.
+Hodoscope2 has 1 hits.
+Chamber1 has 526 hits.
+Chamber2 has 474 hits.
+EmCalorimeter has 62 hits. Total Edep is 27451.1 (MeV)
+HadCalorimeter has 18 hits. Total Edep is 1697.45 (MeV)
+
+>>> Event 3 >>> Simulation truth : K+ (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 4 hits.
+Hodoscope2 has 1 hits.
+Chamber1 has 454 hits.
+Chamber2 has 179 hits.
+EmCalorimeter has 49 hits. Total Edep is 8397.58 (MeV)
+HadCalorimeter has 12 hits. Total Edep is 224.737 (MeV)
+
+>>> Event 4 >>> Simulation truth : proton (-6.91145, 0, 989.976) MeV
+Hodoscope1 has 3 hits.
+Hodoscope2 has 1 hits.
+Chamber1 has 528 hits.
+Chamber2 has 536 hits.
+EmCalorimeter has 52 hits. Total Edep is 28537.2 (MeV)
+HadCalorimeter has 13 hits. Total Edep is 128.031 (MeV)
+Time of this run:   User=4.480000s Real=4.580350s Sys=0.060000s
 Number of events processed: 5
-Real time 0:00:05, CP time 5.450
-G4Integration Driver Stats: #QuickAdvance 80729 - #AccurateAdvance 33341 #good steps 70939 #bad steps 13
-G4ChordFinder statistics report: 
-  No trials: 80222  No Calls: 71389  Max-trial: 4
-  Parameters:   fFirstFraction 0.999  fFractionLast 1  fFractionNextEstimate 0.98
+Real time 0:00:07, CP time 6.970
