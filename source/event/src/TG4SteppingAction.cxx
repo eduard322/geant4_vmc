@@ -373,7 +373,7 @@ G4ThreeVector postPosition  = MyPostStepPoint->GetPosition();
 G4ThreeVector postMomentum = MyPostStepPoint->GetMomentum();
 G4ThreeVector preMomentum = MyPreStepPoint->GetMomentum();
 
-if (wiriteFlag==0 && ((postPosition[2]/cm > -2650. && postPosition[2]/cm < -2550.&& abs(postPosition[0]/cm) < 60. && abs(postPosition[1]/cm) < 170.)||(postPosition[2]/cm > -3150. && postPosition[2]/cm < -3050.&& abs(postPosition[0]/cm) < 60. && abs(postPosition[1]/cm) < 170.)))
+if (wiriteFlag==0 && (postPosition[2]/cm > -5732. && postPosition[2]/cm < -3170.&& abs(postPosition[0]/cm) < 25. && abs(postPosition[1]/cm) < 25.))
     {
       wiriteFlag = 1;
     }
